@@ -1,5 +1,3 @@
-g9-a3g9stock
-
 
 # Beer Friends Stock System
 ## Aplicación web para Control de Stock de Cervecerías Artesanales
@@ -21,3 +19,7 @@ El usuario administrador podrá agregar usuarios nuevos en el sistema, modificar
 | Bima, Carolina |
 | Gentilini, Domingo  |
 | Moyano, María de los Ángeles |
+
+
+
+g9-a3g9stock

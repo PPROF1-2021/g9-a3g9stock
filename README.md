@@ -1,4 +1,7 @@
 
+<a href="url"><img src="https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/Codigo/assets/logo.png" align="left" height="400"></a>
+
+
 # Beer Friends Stock System
 ## Aplicación web para Control de Stock de Cervecerías Artesanales
 
@@ -9,8 +12,12 @@ y el stock de producción, cargar, modificar y consultar información de los pro
 y elaboración de listado de pedidos. 
 El usuario administrador podrá agregar usuarios nuevos en el sistema, modificar los permisos de los creados y de los existentes.
 
+<br><br>
+
 
 ### Aula 3 -  Grupo 9
+
+
 
 | Integrantes: |
 |:-------------------------:|
@@ -22,4 +29,4 @@ El usuario administrador podrá agregar usuarios nuevos en el sistema, modificar
 
 
 
-g9-a3g9stock
+

@@ -1,5 +1,5 @@
 
-<a href="url"><img src="https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/Codigo/assets/logo.png" align="left" height="400"></a>
+<a href="url"><img src="https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/Codigo/assets/logo.png" align="left" height="250"></a>
 
 
 # Beer Friends Stock System

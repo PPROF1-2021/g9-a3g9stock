@@ -27,6 +27,8 @@ El usuario administrador podrá agregar usuarios nuevos en el sistema, modificar
 | Gentilini, Domingo  |
 | Moyano, María de los Ángeles |
 
+<br><br>
+
 
 ## Modelo Relacional
 

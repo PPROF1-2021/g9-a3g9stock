@@ -2,14 +2,20 @@
 <html lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
-      <title>Beer Friends Stock Software</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Página para cargar los pedidos realizados por los clientes">
+      <meta name="keywords" content="Cerveza, artesanal, pedidos, clientes, beer, stock, control de stock"/>
+      <link rel="icon" type="image/x-icon" href="assets/cup-straw.svg" />
       <link rel="stylesheet" href="style.css">
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-   </head>
+      <!--Bootstrap-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <title>Pedidos de Clientes</title>
+    </head>
    <body>
-		</div>
-      <div class="btn">
+		
+      <div class="boton container-fluid">
      <span class="fas fa-bars"></span>
       </div>
       <nav class="sidebar">
@@ -26,9 +32,9 @@
           <h4>Usuario</h4>
         </center>
            <!--menus-->
-            <li class="active"><a href="#">Inicio</a></li>
+            <li class="active"><a href="index.html">Inicio</a></li>
             <li>
-               <a href="#" class="feat-btn">Cervezas
+               <a href="#" class="feat-boton">Cervezas
                <span class="fas fa-caret-down first"></span>
                </a>
                <ul class="feat-show">
@@ -39,7 +45,7 @@
                </ul>
             </li>
             <li>
-               <a href="#" class="serv-btn">Materias Primas
+               <a href="#" class="serv-boton">Materias Primas
                <span class="fas fa-caret-down second"></span>
                </a>
                <!--submenus-->
@@ -69,15 +75,15 @@
   
       </div>
       <script>
-         $('.btn').click(function(){
+         $('.boton').click(function(){
            $(this).toggleClass("click");
            $('.sidebar').toggleClass("show");
          });
-           $('.feat-btn').click(function(){
+           $('.feat-boton').click(function(){
              $('nav ul .feat-show').toggleClass("show");
              $('nav ul .first').toggleClass("rotate");
            });
-           $('.serv-btn').click(function(){
+           $('.serv-boton').click(function(){
              $('nav ul .serv-show').toggleClass("show1");
              $('nav ul .second').toggleClass("rotate");
            });
@@ -85,5 +91,7 @@
              $(this).addClass("active").siblings().removeClass("active");
            });
       </script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
    </body>
 </html>

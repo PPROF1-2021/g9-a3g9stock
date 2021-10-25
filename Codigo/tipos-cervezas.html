@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tipos de Cervezas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    </div>
+    <div class="btn">
+        <span class="fas fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+        <div class="text">
+            <div class="left_area">
+                <h3>Beer <span>Stock</span></h3>
+            </div>
+        </div>
+        <ul>
+            <!--sidebar start-->
+            <div class="sidebar">
+
+                <img src="img/avatar-icon-png-12.jpg" class="profile" alt="">
+                <h4>Usuario</h4>
+
+                <!--menus-->
+                <li class="active"><a href="index.html">Inicio</a></li>
+                <li>
+                    <a href="#" class="feat-btn">Cervezas
+                        <span class="fas fa-caret-down first"></span>
+                    </a>
+                    <ul class="feat-show">
+                        <li><a href="#">Tipos de Cervezas</a></li>
+                        <li><a href="#">Recetas</a></li>
+                        <li><a href="#">Cocción</a></li>
+                        <li><a href="pedidosClientes.html">Pedidos de Clientes</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="serv-btn">Materias Primas
+                        <span class="fas fa-caret-down second"></span>
+                    </a>
+                    <!--submenus-->
+                    <ul class="serv-show">
+                        <li><a href="#">Stock</a></li>
+                        <li><a href="#">Alta de M.P.</a></li>
+                        <li><a href="#">Proveedores</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Salir</a></li>
+                <div>
+
+                    <div>
+
+                    </div>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="header">
+            <!--BEER STOCK SOFTWARE
+         
+      <h1 class="title">
+            F.R.I.E.N.D.S-->
+
+            <div class="container fluid">
+                <div class="row">
+                    <div class="col-12 col-md-4 p-2">
+                        <div class="card w-100">
+                            <img src="assets/rubia.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-text">Rubia Dorada</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of
+                                    the card's content.
+                                </p>
+                                <ul class="list-group">
+                                    <li class="list-group-item">330 cc <span
+                                            class="badge float-right bg-secondary">4</span></li>
+                                    <li class="list-group-item">600 cc <span
+                                            class="badge float-right bg-secondary">4</span>
+                                    </li>
+                                    <li class="list-group-item">1000 cc <span
+                                            class="badge float-right bg-secondary">4</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div class="container fluid">
+                    <div class="col-12 col-md-4 p-2">
+                        <div class="card w-100">
+                            <img src="assets/roja.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-text">Colorada</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of
+                                    the card's content.
+                                </p>
+                                <ul class="list-group">
+                                    <li class="list-group-item">330 cc <span
+                                            class="badge float-right bg-secondary">4</span></li>
+                                    <li class="list-group-item">600 cc <span
+                                            class="badge float-right bg-secondary">4</span>
+                                    </li>
+                                    <li class="list-group-item">1000 cc <span
+                                            class="badge float-right bg-secondary">4</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div class="container fluid">
+                    <div class="col-12 col-md-4 p-2">
+                        <div class="card w-100">
+                            <img src="assets/negra.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-text">Porter Outmeal</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item">330 cc. <span
+                                            class="badge float-right bg-secondary">4</span></li>
+                                    <li class="list-group-item">600 cc <span
+                                            class="badge float-right bg-secondary">4</span>
+                                    </li>
+                                    <li class="list-group-item">1000 cc<span
+                                            class="badge float-right bg-secondary">4</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.btn').click(function () {
+            $(this).toggleClass("click");
+            $('.sidebar').toggleClass("show");
+        });
+        $('.feat-btn').click(function () {
+            $('nav ul .feat-show').toggleClass("show");
+            $('nav ul .first').toggleClass("rotate");
+        });
+        $('.serv-btn').click(function () {
+            $('nav ul .serv-show').toggleClass("show1");
+            $('nav ul .second').toggleClass("rotate");
+        });
+        $('nav ul li').click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -52,10 +52,10 @@
                <ul class="serv-show">
                   <li><a href="#">Stock</a></li>
                   <li><a href="#">Alta de M.P.</a></li>
-                  <li><a href="#">Proveedores</a></li>
+                  <li><a href="proveedores.html">Proveedores</a></li>
                </ul>
             </li>
-            <li><a href="#">Clientes</a></li>
+            <li><a href="registroUsuarios.html">Usuarios</a></li>
             <li><a href="#">Contacto</a></li>
             <li><a href="#">Salir</a></li>
             <div>
@@ -72,8 +72,9 @@
               <!-- Formulario  -->
               <div class="container-fluid col-9 border border-warning gx-5 p-5 ">
                 <form class="row g-3" id="compraEntradas">
-                  
-                 
+                 <p class="h1" id="pNuevoPedido"> Nuevo Pedido </p> 
+                
+                 <br>
                   <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Buscar cliente" aria-label="Buscar cliente" aria-describedby="button-addon2">
                     <button class="btn btn-outline-secondary text-white" type="button" id="btnBuscarCliente">Buscar</button>
@@ -94,8 +95,8 @@
                     <input type="text" class="form-control" id="inputCantidad" placeholder="cantidad">
                   </div>
                   <div class="col-md-2">
-                    <label for="inputCantidad" class="form-label">Prec. Unitario</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="$" aria-label="precioUnit">
+                    <label for="inputCantidad" class="form-label" >Prec. Unitario</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="$" aria-label="precioUnit" disabled>
                   </div>
               
                   <div class="alert alert-warning text-start" role="alert" >

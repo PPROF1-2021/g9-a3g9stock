@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="es" dir="ltr">
    <head>
       <meta charset="utf-8">
@@ -27,8 +26,8 @@
          <ul>
         <!--sidebar start-->
         <div class="sidebar text-center">
-				
-          <img src= "img/avatar-icon-png-12.jpg" class= "profile" alt="">
+          
+				<img src= "img/avatar-icon-png-12.jpg" class= "profile" alt="">
           <h4>Usuario</h4>
         
            <!--menus-->
@@ -50,9 +49,9 @@
                </a>
                <!--submenus-->
                <ul class="serv-show">
-                  <li><a href="#">Stock</a></li>
-                  <li><a href="#">Alta de M.P.</a></li>
-                  <li><a href="#">Proveedores</a></li>
+                <li><a href="Stockmateriaprima.html">Stock</a></li>
+                <li><a href="AltadeStockmateriaprima.html">Alta Materia Prima</a></li>
+                <li><a href="proveedores.html">Proveedores</a></li>
                </ul>
             </li>
             <li><a href="#">Clientes</a></li>
@@ -60,12 +59,11 @@
             <li><a href="#">Salir</a></li>
             <div>
             </div>
-         </ul>
       </nav>
       <div class="content">
          <div class="header">
           <div class="container-fluid col-9 border border-warning gx-5 p-5">
-            <form class="row g-3" id="Stock">
+            <form class="row g-3" id="pAltadeMateriaPrima">
             <p class="h3" id="pAltadeMateriaPrima">Alta de Materia prima</p> 
           <div class="col-md-12">
           <label for="selectUsuario" class="form-label">Tipo de Usuario</label>
@@ -112,18 +110,12 @@
               <div class="col">
                   <button class="btn btn-success col-sm-12  botonIngresar" type="button" id="btnIngresar" onclick="Ingresar();">Ingresar</button>
               </div>
-             
-                </div>
+               </div>
               </div>
-            
             </form>
           </div>
-
-         </div>
-      </div>
       <table>
-        
-      </table>
+        </table>
       <script>
          $('.boton').click(function(){
            $(this).toggleClass("click");

@@ -59,7 +59,7 @@ function validarRegUsuario() {
     return false;
   }
 
-  //validación del mail:
+  //valido que el email sea valido:
   if (
     !/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
       email

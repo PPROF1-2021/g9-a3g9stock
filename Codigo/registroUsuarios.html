@@ -7,6 +7,7 @@
       <meta name="keywords" content="Cerveza, artesanal, pedidos, clientes, beer, stock, control de stock"/>
       <link rel="icon" type="image/x-icon" href="assets/cup-straw.svg" />
       <link rel="stylesheet" href="style.css">
+      <script src="js/scripts.js"></script>
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <!--Bootstrap-->
@@ -26,11 +27,11 @@
         </div>
          <ul>
         <!--sidebar start-->
-        <div class="sidebar">
-				<center>
+        <div class="sidebar text-center">
+				
           <img src= "img/avatar-icon-png-12.jpg" class= "profile" alt="">
           <h4>Usuario</h4>
-        </center>
+        
            <!--menus-->
             <li class="active"><a href="index.html">Inicio</a></li>
             <li>
@@ -57,7 +58,7 @@
             </li>
             <li><a href="#">Usuarios</a></li>
             <li><a href="#">Contacto</a></li>
-            <li><a href="#">Salir</a></li>
+            <li><a href="login.html">Salir</a></li>
             <div>
 
             <div>
@@ -96,17 +97,17 @@
         
         <div class="col-md-6">
           <label for="inputFNacim" class="form-label">Fecha de Nacimiento</label>
-          <input type="date" class="form-control" id="inputCantidad">
+          <input type="date" class="form-control" id="inputFNacim">
         </div>
         <div class="col-md-6">
-          <label for="inputCategoria" class="form-label">Provincia</label>
-          <select id="inputCategoria" class="form-select" >
+          <label for="selectProvincia" class="form-label">Provincia</label>
+          <select id="selectProvincia" class="form-select" >
+            <option value="Córdoba" selected>Córdoba</option>
             <option value="Buenos Aires">Buenos Aires</option>
             <option value="Capital Federal">Capital Federal</option>
             <option value="Catamarca">Catamarca</option>
             <option value="Chaco">Chaco</option>
             <option value="Chubut">Chubut</option>
-            <option value="Córdoba" selected>Córdoba</option>
             <option value="Corrientes">Corrientes</option>
             <option value="Entre Ríos">Entre Ríos</option>
             <option value="Formosa">Formosa</option>
@@ -125,15 +126,21 @@
             <option value="Santiago del Estero">Santiago del Estero</option>
             <option value="Tierra del Fuego">Tierra del Fuego</option>
             <option value="Tucumán">Tucumán</option>
-            
-            
-            
           </select>
         </div>
     
-       
+        <div class="col-md-12">
+          <label for="selectUsuario" class="form-label">Tipo de Usuario</label>
+          <select id="selectUsuario" class="form-select" >
+            <option value="0" selected>Seleccione un tipo de usuario</option>
+            <option value="Produccion">Usuario de Producción</option>
+            <option value="Almacen">Usuario de Almacén</option>
+            <option value="Administrador">Administrador</option>
+            
+          </select>
+        </div>
         <div class="col">
-            <button class="btn btn-success col-sm-12  botonEnviar" type="button" id="btnBorrar" onclick="borrar();">Borrar</button>
+            <button class="btn btn-success col-sm-12  botonEnviar" type="button" id="btnBorrar" onclick="borrarRegistroUsuarios();">Borrar</button>
         </div>
         <div class="col">
             <button class="btn btn-success col-sm-12 botonEnviar" type="button" id="btnResumen"  onclick="calcularTotal();">Guardar</button>

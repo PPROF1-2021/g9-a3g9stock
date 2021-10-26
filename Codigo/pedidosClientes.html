@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,13 +67,62 @@
       </nav>
       <div class="content">
          <div class="header">
-            <!--BEER STOCK SOFTWARE
-         
-      <h1 class="title">
-            F.R.I.E.N.D.S-->
+            
+            <div>
+              <!-- Formulario  -->
+              <div class="container-fluid col-9">
+                <form class="row g-3" id="compraEntradas">
+                  
+                 
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Buscar cliente" aria-label="Buscar cliente" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary text-white" type="button" id="btnBuscarCliente">Buscar</button>
+                    <button class="btn btn-outline-secondary text-white" type="button">Añadir</button>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <label for="inputCategoria" class="form-label">Tipo de cerveza</label>
+                    <select id="inputCategoria" class="form-select" >
+                      <option selected>Rubia</option>
+                      <option>Roja</option>
+                      <option>Honey</option>
+                      <option>Ipa</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputCantidad" class="form-label">Cantidad</label>
+                    <input type="text" class="form-control" id="inputCantidad" placeholder="cantidad">
+                  </div>
+                  <div class="col-md-2">
+                    <label for="inputCantidad" class="form-label">Prec. Unitario</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="$" aria-label="precioUnit">
+                  </div>
+              
+                  <div class="alert alert-warning text-start" role="alert" >
+                    <p class="mb-0" id="importeTotal">Total a Pagar: $</p>
+                  </div>
+                  
+                  <div class="col">
+                      <button class="btn btn-success col-sm-12  botonEnviar" type="button" id="btnBorrar" onclick="borrar();">Borrar</button>
+                  </div>
+                  <div class="col">
+                      <button class="btn btn-success col-sm-12 botonEnviar" type="button" id="btnResumen"  onclick="calcularTotal();">Guardar</button>
+                    </div>
+                  </div>
+                
+                </form>
+              </div>
+            
+            
+                <!-- fin de Formulario  -->
+          
+             </div>
+          </div>
+    
          </div>
-  
-      </div>
+        
+
+      
       <script>
          $('.boton').click(function(){
            $(this).toggleClass("click");

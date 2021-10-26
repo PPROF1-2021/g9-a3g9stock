@@ -32,7 +32,7 @@
           <h4>Usuario</h4>
         </center>
            <!--menus-->
-            <li class="active"><a href="#">Inicio</a></li>
+            <li class="active"><a href="index.html">Inicio</a></li>
             <li>
                <a href="#" class="feat-boton">Cervezas
                <span class="fas fa-caret-down first"></span>
@@ -55,7 +55,7 @@
                   <li><a href="proveedores.html">Proveedores</a></li>
                </ul>
             </li>
-            <li><a href="registroUsuarios.html">Usuarios</a></li>
+            <li><a href="#">Usuarios</a></li>
             <li><a href="#">Contacto</a></li>
             <li><a href="#">Salir</a></li>
             <div>
@@ -67,10 +67,86 @@
       </nav>
       <div class="content">
          <div class="header">
-            <!--BEER STOCK SOFTWARE
-         
-      <h1 class="title">
-            F.R.I.E.N.D.S-->
+          <div class=""> 
+           
+     <!-- Formulario  -->
+ 
+    <div class="container-fluid col-9 border border-warning gx-5 p-5 ">
+      <form class="row g-3" id="compraEntradas">
+        <p class="h1" id="pRegistroUsuario">Registro de Usuario</p> 
+        <div class="col-md-6">
+          <input type="text" class="form-control" id="inputNombre" placeholder="Nombre"  aria-label="Nombre" >
+        </div>
+        <div class="col-md-6">
+          <input type="text" class="form-control" id="inputApellido" placeholder="Apellido"  aria-label="Apellido">
+        </div>
+        <div class="col-md-6">
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email" aria-label="Email">
+        </div>
+        <div class="col-md-6">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña" aria-label="Contrasenia">
+        </div>
+      
+        <div class="col-md-6">
+          <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono" aria-label="Teléfono">
+        </div>
+        <div class="col-md-6">
+          <input type="Dirección" class="form-control" id="inputDireccion" placeholder="Dirección" aria-label="Dirección">
+        </div>
+        
+        <div class="col-md-6">
+          <label for="inputFNacim" class="form-label">Fecha de Nacimiento</label>
+          <input type="date" class="form-control" id="inputCantidad">
+        </div>
+        <div class="col-md-6">
+          <label for="inputCategoria" class="form-label">Provincia</label>
+          <select id="inputCategoria" class="form-select" >
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Capital Federal">Capital Federal</option>
+            <option value="Catamarca">Catamarca</option>
+            <option value="Chaco">Chaco</option>
+            <option value="Chubut">Chubut</option>
+            <option value="Córdoba" selected>Córdoba</option>
+            <option value="Corrientes">Corrientes</option>
+            <option value="Entre Ríos">Entre Ríos</option>
+            <option value="Formosa">Formosa</option>
+            <option value="Jujuy">Jujuy</option>
+            <option value="La Pampa">La Pampa</option>
+            <option value="La Rioja">La Rioja</option>
+            <option value="Mendoza">Mendoza</option>
+            <option value="Misiones">Misiones</option>
+            <option value="Neuquén">Neuquén</option>
+            <option value="Río Negro">Río Negro</option>
+            <option value="Salta">Salta</option>
+            <option value="San Juan">San Juan</option>
+            <option value="San Luis">San Luis</option>
+            <option value="Santa Cruz">Santa Cruz</option>
+            <option value="Santa Fe">Santa Fe</option>
+            <option value="Santiago del Estero">Santiago del Estero</option>
+            <option value="Tierra del Fuego">Tierra del Fuego</option>
+            <option value="Tucumán">Tucumán</option>
+            
+            
+            
+          </select>
+        </div>
+    
+       
+        <div class="col">
+            <button class="btn btn-success col-sm-12  botonEnviar" type="button" id="btnBorrar" onclick="borrar();">Borrar</button>
+        </div>
+        <div class="col">
+            <button class="btn btn-success col-sm-12 botonEnviar" type="button" id="btnResumen"  onclick="calcularTotal();">Guardar</button>
+          </div>
+        </div>
+      
+      </form>
+    </div>
+  
+  
+      <!-- fin de Formulario  -->
+     
+           </div>
          </div>
   
       </div>

@@ -7,6 +7,7 @@
       <meta name="keywords" content="Cerveza, artesanal, pedidos, clientes, beer, stock, control de stock"/>
       <link rel="icon" type="image/x-icon" href="assets/cup-straw.svg" />
       <link rel="stylesheet" href="style.css">
+      <script src="js/scripts.js"></script>
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <!--Bootstrap-->
@@ -50,10 +51,8 @@
                </a>
                <!--submenus-->
                <ul class="serv-show">
-
                   <li><a href="#">Stock</a></li>
                   <li><a href="AltadeStockmateriaprima.html">Alta de M.P.</a></li>
-
                   <li><a href="proveedores.html">Proveedores</a></li>
                </ul>
             </li>
@@ -68,35 +67,50 @@
          </ul>
       </nav>
 
-   
       <div class="content">
-         <div class="header">
-            <div class="container container-fluid col-md-6 offset-md-3" id="contenedorCarrousel">
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-               <div class="carousel-inner">
-                 <div class="carousel-item active " data-bs-interval="10000">
-                  <iframe  class="d-block w-100 "  width="560"  height="315"  src="https://www.youtube.com/embed/hArKK0SpGi4" title="YouTube video player"></iframe>
-                 </div>
-                 <div class=" carousel-item" data-bs-interval="2000">
-                  <iframe class="d-block w-100"  width="560"  height="315" src="https://www.youtube.com/embed/bOkUsvmN9qI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                 </div>
-                 <div class="carousel-item">
-                  <iframe class="d-block w-100"  width="560"  height="315" src="https://www.youtube.com/embed/wc0_yOZVheM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                 </div>
-               </div>
-            
-               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                 <span class="visually-hidden">Previous</span>
-               </button>
-               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                 <span class="visually-hidden">Next</span>
-               </button>
-             </div>
+        <div class="header">
+    <!-- Formulario  -->
+ 
+    <div class="container-fluid col-9 border border-warning gx-5 p-5 ">
+        <form class="row g-3" id="frmContacto">
+          <p class="h1" id="pFrmContacto">Contacto</p> 
+          <p class="h6" id="txtExplicativo">Si querés vender nuestros productos en tu comercio, dejanos tu consulta y tus datos y nos contactaremos a la brevedad</p>
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="inNombreComent" placeholder="Nombre"  aria-label="Nombre" >
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="inApellidoComent" placeholder="Apellido"  aria-label="Apellido">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="inTelefonoComent" placeholder="Teléfono (Sin 0 ni 15)" aria-label="Teléfono">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" id="inEmailComent" placeholder="Email" aria-label="Email">
+          </div>
+          
+          <div class="form-floating col-md-12">
+            <div class="form-floating">
+                <label for="txtComentario">Comentarios</label>
+                <textarea class="form-control" placeholder="Dejános tu comentario" id="txtComentario" style="height: 100px"></textarea>
+              </div>
+        </div>
+
+
+
+          <div class="col">
+              <button class="btn btn-success col-sm-12  botonEnviar" type="button" id="btnBorrar" onclick="borrarCamposComent();">Borrar</button>
+          </div>
+          <div class="col">
+              <button class="btn btn-success col-sm-12 botonEnviar" type="button" id="btnResumen"  onclick="validarComent();">Enviar</button>
             </div>
-         </div>
-  
+          </div>
+        
+        </form>
+      </div>
+    
+    
+        <!-- fin de Formulario  -->
+
       </div>
       <script>
          $('.boton').click(function(){

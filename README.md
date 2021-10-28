@@ -30,6 +30,13 @@ El usuario administrador podrá agregar usuarios nuevos en el sistema, modificar
 <br><br>
 
 
+## Mapa del sitio
+
+![Mapa del sitio](https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/Documentaci%C3%B3n/Mapa%20del%20sitio.jpg)
+
+<br><br>
+
+
 ## Modelo Relacional (no definitivo)
 
 ![Modelo Relacional](https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/BDD/BBDD.png)

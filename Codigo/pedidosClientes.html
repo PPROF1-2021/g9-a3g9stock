@@ -7,6 +7,7 @@
       <meta name="keywords" content="Cerveza, artesanal, pedidos, clientes, beer, stock, control de stock"/>
       <link rel="icon" type="image/x-icon" href="assets/cup-straw.svg" />
       <link rel="stylesheet" href="style.css">
+      <script src="js/scripts.js"></script>
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <!--Bootstrap-->
@@ -76,14 +77,14 @@
                 
                  <br>
                   <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Buscar cliente" aria-label="Buscar cliente" aria-describedby="button-addon2">
+                    <input type="text" class="form-control" id="inputBusquedaCliente" placeholder="Buscar cliente" aria-label="Buscar cliente" aria-describedby="button-addon2">
                     <button class="btn btn-outline-secondary text-white" type="button" id="btnBuscarCliente">Buscar</button>
-                    <button class="btn btn-outline-secondary text-white" type="button">Añadir</button> 
+                    <button class="btn btn-outline-secondary text-white" type="button">Nuevo</button> 
                   </div>
                   
                   <div class="col-md-6">
-                    <label for="inputCategoria" class="form-label">Tipo de cerveza</label>
-                    <select id="inputCategoria" class="form-select" >
+                    <label for="inputTipoCerveza" class="form-label">Tipo de cerveza</label>
+                    <select id="inputTipoCerveza" class="form-select" >
                       <option selected>Rubia</option>
                       <option>Roja</option>
                       <option>Honey</option>
@@ -95,8 +96,8 @@
                     <input type="text" class="form-control" id="inputCantidad" placeholder="cantidad">
                   </div>
                   <div class="col-md-2">
-                    <label for="inputCantidad" class="form-label" >Prec. Unitario</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="$" aria-label="precioUnit" disabled>
+                    <label for="inputPrecioUnitario" class="form-label" >Prec. Unit.</label>
+                    <input type="email" class="form-control" id="inputPrecioUnitario" placeholder="$" aria-label="precioUnit" value="$0" disabled>
                   </div>
               
                   <div class="alert alert-warning text-start" role="alert" >
@@ -104,10 +105,10 @@
                   </div>
                   
                   <div class="col">
-                      <button class="btn btn-success col-sm-12  botonEnviar" type="button" id="btnBorrar" onclick="borrar();">Borrar</button>
+                      <button class="btn btn-success col-sm-12  botonEnviar" type="button" id="btnBorrar" onclick="borrarCamposPedido();">Borrar</button>
                   </div>
                   <div class="col">
-                      <button class="btn btn-success col-sm-12 botonEnviar" type="button" id="btnResumen"  onclick="validar();">Guardar</button>
+                      <button class="btn btn-success col-sm-12 botonEnviar" type="button" id="btnResumen"  onclick="validarNuevoPedido();">Guardar</button>
                     </div>
                   </div>
                 

@@ -123,3 +123,12 @@ function validarComent() {
     return false;
   }
 }
+
+//validacion del formulario de Pedido, borrado de los campos cargados
+function borrarCamposPedido() {
+  document.getElementById('inputBusquedaCliente').value = '';
+  document.getElementById('inputTipoCerveza').selectedIndex = 0;
+  document.getElementById('inputCantidad').value = '';
+  document.getElementById('inputPrecioUnitario').value = '$0';
+  document.getElementById('importeTotal').value = 'Total a Pagar: $';
+}

@@ -132,3 +132,11 @@ function borrarCamposPedido() {
   document.getElementById('inputPrecioUnitario').value = '$0';
   document.getElementById('importeTotal').value = 'Total a Pagar: $';
 }
+
+function validarNuevoPedido() {
+  var nombre, tipoCerveza, cantidad;
+
+  nombre = document.getElementById('inputBusquedaCliente').value;
+  tipoCerveza = document.getElementById('inputTipoCerveza').selectedIndex;
+  cantidad = document.getElementById('inputCantidad').value;
+}

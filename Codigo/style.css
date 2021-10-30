@@ -21,7 +21,7 @@
 }
 
 .header {
-  height: 70vh;
+  height: 69vh;
   background-image: url(img/fondo5.png);
   background-size: cover;
   background-position: auto;
@@ -147,9 +147,9 @@ nav ul li a {
   position: relative;
   color: rgb(192, 190, 190);
   text-decoration: none;
-  font-size: 18px;
-  padding-left: 40px;
-  font-weight: 500;
+  font-size: 20px;
+  padding-left: 10px;
+  font-weight: 600;
   display: block;
   width: 100%;
   border-left: 3px solid transparent;
@@ -178,9 +178,9 @@ nav ul ul li {
   border-top: none;
 }
 nav ul ul li a {
-  font-size: 17px;
+  font-size: 15px;
   color: #e6e6e6;
-  padding-left: 80px;
+  padding-left: 40px;
 }
 nav ul li.active ul li a {
   color: #bbbbbb;
@@ -211,7 +211,8 @@ nav ul li a span.rotate {
   z-index: -1;
   text-align: center;
 }
-.container-fluid {
+
+.container-grey {
   background: rgb(64, 61, 62);
   background: radial-gradient(
     circle,

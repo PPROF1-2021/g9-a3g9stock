@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +11,16 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <!--Bootstrap-->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <title>Pedidos de Clientes</title>
+
+      <title>Beer Stock System</title>
+
     </head>
    <body>
 		
       <div class="boton">
      <span class="fas fa-bars"></span>
       </div>
-      <nav class="sidebar">
+      <nav class="sidebar ">
          <div class="text">
           <div class="left_area">
             <h3>Beer <span>Stock</span></h3>
@@ -26,11 +28,11 @@
         </div>
          <ul>
         <!--sidebar start-->
-        <div class="sidebar">
-				<center>
+
+        <div class="sidebar text-center" >
           <img src= "img/avatar-icon-png-12.jpg" class= "profile" alt="">
           <h4>Usuario</h4>
-        </center>
+        
            <!--menus-->
             <li class="active"><a href="#">Inicio</a></li>
             <li>
@@ -52,12 +54,12 @@
                <ul class="serv-show">
                   <li><a href="#">Stock</a></li>
                   <li><a href="#">Alta de M.P.</a></li>
-                  <li><a href="#">Proveedores</a></li>
+                  <li><a href="proveedores.html">Proveedores</a></li>
                </ul>
             </li>
-            <li><a href="#">Clientes</a></li>
+            <li><a href="registroUsuarios.html">Usuarios</a></li>
             <li><a href="#">Contacto</a></li>
-            <li><a href="#">Salir</a></li>
+            <li><a href="login.html">Salir</a></li>
             <div>
 
             <div>
@@ -65,12 +67,34 @@
             </div>
          </ul>
       </nav>
+
+   
       <div class="content">
          <div class="header">
-            <!--BEER STOCK SOFTWARE
-         
-      <h1 class="title">
-            F.R.I.E.N.D.S-->
+            <div class="container container-fluid col-md-6 offset-md-3" id="contenedorCarrousel">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+               <div class="carousel-inner">
+                 <div class="carousel-item active " data-bs-interval="10000">
+                  <iframe  class="d-block w-100 "  width="560"  height="315"  src="https://www.youtube.com/embed/hArKK0SpGi4" title="YouTube video player"></iframe>
+                 </div>
+                 <div class=" carousel-item" data-bs-interval="2000">
+                  <iframe class="d-block w-100"  width="560"  height="315" src="https://www.youtube.com/embed/bOkUsvmN9qI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                 </div>
+                 <div class="carousel-item">
+                  <iframe class="d-block w-100"  width="560"  height="315" src="https://www.youtube.com/embed/wc0_yOZVheM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                 </div>
+               </div>
+            
+               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                 <span class="visually-hidden">Previous</span>
+               </button>
+               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                 <span class="visually-hidden">Next</span>
+               </button>
+             </div>
+            </div>
          </div>
   
       </div>

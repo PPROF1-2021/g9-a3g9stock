@@ -14,11 +14,13 @@
   margin: auto;
   padding: 0px 0;
 }
+
 .header {
   height: 100vh;
   background-image: url(img/beer4.png);
   background-size: cover;
   background-position: auto;
+
     font-size: 1em;
     font-weight: 600;
     display: flex;
@@ -38,6 +40,27 @@
  }
  .left_area {
   margin-top:-80;
+=======
+  font-size: 1em;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.h1 {
+  font-size: 20px;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.left_area {
+  margin-top: -80;
+>>>>>>> 75fae881f604ce1fe9f9580fd7c69102d3ed4c9d
   color: #fff;
   text-transform: uppercase;
   font-size: 22px;

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" dir="ltr">
    <head>
       <meta charset="utf-8">
@@ -11,11 +12,10 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <!--Bootstrap-->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <title>Pedidos de Clientes</title>
+      <title>Alta de Materia prima</title>
     </head>
    <body>
-		
-      <div class="boton container-fluid">
+    <div class="boton">
      <span class="fas fa-bars"></span>
       </div>
       <nav class="sidebar">
@@ -32,7 +32,7 @@
           <h4>Usuario</h4>
         
            <!--menus-->
-            <li class="active"><a href="index.html">Inicio</a></li>
+            <li class="active"><a href="#">Inicio</a></li>
             <li>
                <a href="#" class="feat-boton">Cervezas
                <span class="fas fa-caret-down first"></span>
@@ -41,7 +41,7 @@
                   <li><a href="#">Tipos de Cervezas</a></li>
                   <li><a href="#">Recetas</a></li>
                   <li><a href="#">Cocción</a></li>
-                  <li><a href="#">Pedidos de Clientes</a></li>
+                  <li><a href="pedidosClientes.html">Pedidos de Clientes</a></li>
                </ul>
             </li>
             <li>
@@ -52,78 +52,78 @@
                <ul class="serv-show">
                   <li><a href="#">Stock</a></li>
                   <li><a href="#">Alta de M.P.</a></li>
-                  <li><a href="proveedores.html">Proveedores</a></li>
+                  <li><a href="#">Proveedores</a></li>
                </ul>
             </li>
-            <li><a href="registroUsuarios.html">Usuarios</a></li>
+            <li><a href="#">Clientes</a></li>
             <li><a href="#">Contacto</a></li>
-            <li><a href="login.html">Salir</a></li>
+            <li><a href="#">Salir</a></li>
             <div>
-
-            <div>
-      
             </div>
          </ul>
       </nav>
       <div class="content">
          <div class="header">
-            
-            <div class=""> 
-              <!-- Formulario  -->
-              <div class="container-fluid col-9 border border-warning gx-5 p-5 ">
-                <form class="row g-3" id="compraEntradas">
-                 <p class="h1" id="pNuevoPedido"> Nuevo Pedido </p> 
-                
-                 <br>
-                  <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Buscar cliente" aria-label="Buscar cliente" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary text-white" type="button" id="btnBuscarCliente">Buscar</button>
-                    <button class="btn btn-outline-secondary text-white" type="button">Añadir</button> 
-                  </div>
-                  
-                  <div class="col-md-6">
-                    <label for="inputCategoria" class="form-label">Tipo de cerveza</label>
-                    <select id="inputCategoria" class="form-select" >
-                      <option selected>Rubia</option>
-                      <option>Roja</option>
-                      <option>Honey</option>
-                      <option>Ipa</option>
-                    </select>
-                  </div>
-                  <div class="col-md-4">
-                    <label for="inputCantidad" class="form-label">Cantidad</label>
-                    <input type="text" class="form-control" id="inputCantidad" placeholder="cantidad">
-                  </div>
-                  <div class="col-md-2">
-                    <label for="inputCantidad" class="form-label" >Prec. Unitario</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="$" aria-label="precioUnit" disabled>
-                  </div>
-              
-                  <div class="alert alert-warning text-start" role="alert" >
-                    <p class="mb-0" id="importeTotal">Total a Pagar: $</p>
-                  </div>
-                  
-                  <div class="col">
-                      <button class="btn btn-success col-sm-12  botonEnviar" type="button" id="btnBorrar" onclick="borrar();">Borrar</button>
-                  </div>
-                  <div class="col">
-                      <button class="btn btn-success col-sm-12 botonEnviar" type="button" id="btnResumen"  onclick="validar();">Guardar</button>
-                    </div>
-                  </div>
-                
-                </form>
+          <div class="container-fluid col-9 border border-warning gx-5 p-5">
+            <form class="row g-3" id="Stock">
+            <p class="h3" id="pAltadeMateriaPrima">Alta de Materia prima</p> 
+          <div class="col-md-12">
+          <label for="selectUsuario" class="form-label">Tipo de Usuario</label>
+          <select id="selectUsuario" class="form-select" >
+          <option value="0" selected>Seleccione un tipo de usuario</option>
+          <option value="Produccion">Usuario de Producción</option>
+          <option value="Almacen">Usuario de Almacén</option>
+          <option value="Administrador">Administrador</option> 
+                  </select>
+              </div>
+              <div class="col-md-6">
+                <label for="Insumos" class="form-label">Insumos</label>
+                <select id="Insumos" class="form-select" >
+                  <option value="Azúcares">Azúcares</option>
+                  <option value="Clarificantes">Clarificantes</option>
+                  <option value="Extractos">Extractos</option>
+                  <option value="Kit Insumos">Kit Insumos</option>
+                  <option value="Kit Gluten Free">Kit Gluten Free</option>
+                  <option value="Levadura">Levadura</option>
+                  <option value="Limpieza">Limpieza</option>
+                  <option value="Limpieza de insumos">Limpieza de insumos</option>
+                  <option value="Lúlupo">Lúpulo</option>
+                  <option value="Malta">Malta</option>
+                  <option value="Saborizantes">Saborizantes</option>
+                  <option value="Sales">Sales</option>
+                  <option value="Botellas">Botellas</option>
+                  <option value="Tapas">Tapas</option>
+                  <option value="Etiquetas">Etiquetas</option>
+                   
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="Cantidad" class="form-label">Cantidad</label>
+                <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad" aria-label="Cantidad">
+              </div>
+              <div class="col-md-6">
+                <label for="Tipo" class="form-label">Tipo de Empaquetado</label>
+                <input type="text" class="form-control" id="inputEmpaquetado" placeholder="Empaquetado" aria-label="Empaquetado">
+              </div>
+              <div class="col-md-6">
+                <label for="Proveedor" class="form-label">Proveedor</label>
+                <input type="text" class="form-control" id="inputProveedor" placeholder="Proveedor" aria-label="Proveedor">
+              </div>
+              <div class="col">
+                  <button class="btn btn-success col-sm-12  botonIngresar" type="button" id="btnIngresar" onclick="Ingresar();">Ingresar</button>
+              </div>
+             
+                </div>
               </div>
             
-            
-                <!-- fin de Formulario  -->
-          
-             </div>
+            </form>
           </div>
-    
-         </div>
-        
 
-      
+         </div>
+      </div>
+      <table>
+        
+      </table>
       <script>
          $('.boton').click(function(){
            $(this).toggleClass("click");

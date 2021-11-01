@@ -20,18 +20,18 @@
    <body>
 		
       <div class="boton">
-     <span class="fas fa-bars"></span>
+         <span class="fas fa-bars"></span>
       </div>
       <nav class="sidebar ">
-        <div class="text">
-         <div class="left_area">
-           <h3>Beer <span>Stock</span></h3>
-         </div> 
-       </div>
+         <div class="text">
+            <div class="left_area">
+            <h3>Beer <span>Stock</span></h3>
+            </div> 
+         </div>
         
        <!--sidebar start-->
-       <ul>
-       <div class="sidebar text-center" >
+      <ul>
+      <div class="sidebar text-center" >
        
          <img src= "img/avatar-icon-png-12.jpg" class= "profile" alt="">
          <h4>Usuario</h4>
@@ -76,77 +76,92 @@
      <!-- Formulario  -->
  
      <div class="container-fluid col-9 border border-warning gx-5 p-5 border border-3 container-grey ">
-      <form class="row g-3" id="registroDeUsuario">
-        <p class="h1" id="pRegistroUsuario">Registro de Usuario</p> 
-        <div class="col-md-6">
-          <input type="text" class="form-control" id="inputNombre" placeholder="Nombre"  aria-label="Nombre" >
-        </div>
-        <div class="col-md-6">
-          <input type="text" class="form-control" id="inputApellido" placeholder="Apellido"  aria-label="Apellido">
-        </div>
-        <div class="col-md-6">
-          <input type="email" class="form-control" id="inputEmail" placeholder="Email" aria-label="Email">
-        </div>
-        <div class="col-md-6">
-          <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña" aria-label="Contrasenia">
-        </div>
-      
-        <div class="col-md-6">
-          <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono (Sin 0 ni 15)" aria-label="Teléfono">
-        </div>
-        <div class="col-md-6">
-          <input type="Dirección" class="form-control" id="inputDireccion" placeholder="Dirección" aria-label="Dirección">
-        </div>
-        
-        <div class="col-md-6">
-          <label for="inputFNacim" class="form-label">Fecha de Nacimiento</label>
-          <input type="date" class="form-control" id="inputFNacim">
-        </div>
-        <div class="col-md-6">
-          <label for="selectProvincia" class="form-label">Provincia</label>
-          <select id="selectProvincia" class="form-select" >
-            <option value="Córdoba" selected>Córdoba</option>
-            <option value="Buenos Aires">Buenos Aires</option>
-            <option value="Capital Federal">Capital Federal</option>
-            <option value="Catamarca">Catamarca</option>
-            <option value="Chaco">Chaco</option>
-            <option value="Chubut">Chubut</option>
-            <option value="Corrientes">Corrientes</option>
-            <option value="Entre Ríos">Entre Ríos</option>
-            <option value="Formosa">Formosa</option>
-            <option value="Jujuy">Jujuy</option>
-            <option value="La Pampa">La Pampa</option>
-            <option value="La Rioja">La Rioja</option>
-            <option value="Mendoza">Mendoza</option>
-            <option value="Misiones">Misiones</option>
-            <option value="Neuquén">Neuquén</option>
-            <option value="Río Negro">Río Negro</option>
-            <option value="Salta">Salta</option>
-            <option value="San Juan">San Juan</option>
-            <option value="San Luis">San Luis</option>
-            <option value="Santa Cruz">Santa Cruz</option>
-            <option value="Santa Fe">Santa Fe</option>
-            <option value="Santiago del Estero">Santiago del Estero</option>
-            <option value="Tierra del Fuego">Tierra del Fuego</option>
-            <option value="Tucumán">Tucumán</option>
-          </select>
-        </div>
+      <form class="row g-3 needs-validation" novalidate id="registroDeUsuario">
+         <p class="h1" id="pRegistroUsuario">Registro de Usuario</p> 
+         <!--nombre-->
+         <div class="col-md-6">
+            <input type="text" class="form-control" id="inputNombre" placeholder="Nombre"  aria-label="Nombre" required>
+            <div class="invalid-feedback">Ingrese el nombre</div>
+         </div>
+         <!--nombre-->
+         <div class="col-md-6">
+            <input type="text" class="form-control" id="inputApellido" placeholder="Apellido"  aria-label="Apellido" required>
+            <div class="invalid-feedback">Ingrese el Apellido</div>
+         </div>
+         <!-- Email -->
+         <div class="col-md-6">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" aria-label="Email" required>
+            <div class="invalid-feedback">Ingrese un email válido</div>
+         </div>
+         <!-- Contraseña -->
+         <div class="col-md-6">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña" aria-label="Contrasenia" required>
+            <div class="invalid-feedback">Ingrese una contraseña</div>
+         </div>
+         <!--teléfono-->
+         <div class="col-md-6">
+            <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono (Sin 0 ni 15)" aria-label="Teléfono" required>
+            <div class="invalid-feedback">Debe ingresar un teléfono de contacto</div>
+         </div>
+         <!-- direccion -->
+         <div class="col-md-6">
+            <input type="Dirección" class="form-control" id="inputDireccion" placeholder="Dirección" aria-label="Dirección" required>
+            <div class="invalid-feedback">Ingrese la dirección</div>   
+         </div>
+         <!-- Fecha de nacimiento-->
+         <div class="col-md-6">
+            <label for="inputFNacim" class="form-label">Fecha de Nacimiento</label>
+            <input type="date" class="form-control" id="inputFNacim" required>
+            <div class="invalid-feedback">Seleccione la fecha de nacimiento</div>
+         </div>
+         <!--Provincia-->
+         <div class="col-md-6">
+            <label for="selectProvincia" class="form-label">Provincia</label>
+            <select id="selectProvincia" class="form-select" required>
+               <option selected disabled value="">Seleccione Provincia</option>
+               <option value="Córdoba">Córdoba</option>
+               <option value="Buenos Aires">Buenos Aires</option>
+               <option value="Capital Federal">Capital Federal</option>
+               <option value="Catamarca">Catamarca</option>
+               <option value="Chaco">Chaco</option>
+               <option value="Chubut">Chubut</option>
+               <option value="Corrientes">Corrientes</option>
+               <option value="Entre Ríos">Entre Ríos</option>
+               <option value="Formosa">Formosa</option>
+               <option value="Jujuy">Jujuy</option>
+               <option value="La Pampa">La Pampa</option>
+               <option value="La Rioja">La Rioja</option>
+               <option value="Mendoza">Mendoza</option>
+               <option value="Misiones">Misiones</option>
+               <option value="Neuquén">Neuquén</option>
+               <option value="Río Negro">Río Negro</option>
+               <option value="Salta">Salta</option>
+               <option value="San Juan">San Juan</option>
+               <option value="San Luis">San Luis</option>
+               <option value="Santa Cruz">Santa Cruz</option>
+               <option value="Santa Fe">Santa Fe</option>
+               <option value="Santiago del Estero">Santiago del Estero</option>
+               <option value="Tierra del Fuego">Tierra del Fuego</option>
+               <option value="Tucumán">Tucumán</option>
+            </select>
+            <div class="invalid-feedback">Seleccione una provincia</div>
+         </div>
     
-        <div class="col-md-12">
-          <label for="selectUsuario" class="form-label">Tipo de Usuario</label>
-          <select id="selectUsuario" class="form-select" >
-            <option value="0" selected>Seleccione un tipo de usuario</option>
-            <option value="Produccion">Usuario de Producción</option>
-            <option value="Almacen">Usuario de Almacén</option>
-            <option value="Administrador">Administrador</option>
-            
-          </select>
+         <div class="col-md-12">
+            <label for="selectUsuario" class="form-label">Tipo de Usuario</label>
+            <select id="selectUsuario" class="form-select" required>
+               <option selected disabled value="">Seleccione un tipo de usuario</option>
+               <option value="Produccion">Usuario de Producción</option>
+               <option value="Almacen">Usuario de Almacén</option>
+               <option value="Administrador">Administrador</option>
+            </select>
+            <div class="invalid-feedback">Seleccione el tipo de usuario</div>
         </div>
         <div class="col">
-            <button class="btn btn-success col-sm-12  botonEnviar" type="button" id="btnBorrar" onclick="borrarRegistroUsuarios();">Borrar</button>
+            <button class="btn btn-success col-sm-12  botonEnviar" type="submit" id="btnBorrar" onclick="borrarRegistroUsuarios();">Borrar</button>
         </div>
         <div class="col">
-            <button class="btn btn-success col-sm-12 botonEnviar" type="button" id="btnResumen"  onclick="validarRegUsuario();">Guardar</button>
+            <button class="btn btn-success col-sm-12 botonEnviar" type="submit" id="btnResumen"  >Guardar</button>
           </div>
         </div>
       
@@ -261,7 +276,7 @@
         </div>
   
      
-
+   <!-- Script del menú-->
       <script>
          $('.boton').click(function(){
            $(this).toggleClass("click");
@@ -279,6 +294,34 @@
              $(this).addClass("active").siblings().removeClass("active");
            });
       </script>
+
+      <!-- Validaciones en bootstrap-->
+      <script>
+         (function () {
+         'use strict';
+
+         // Fetch all the forms we want to apply custom Bootstrap validation styles to
+         var forms = document.querySelectorAll('.needs-validation');
+
+         // Loop over them and prevent submission
+         Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener(
+               'submit',
+               function (event) {
+               if (!form.checkValidity()) {
+                  event.preventDefault();
+                  event.stopPropagation();
+               }
+
+               form.classList.add('was-validated');
+               },
+               false
+            );
+         });
+         })();
+      </script>
+
+      <!--Bootstrap-->
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
    </body>

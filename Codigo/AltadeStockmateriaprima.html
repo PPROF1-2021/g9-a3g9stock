@@ -71,18 +71,23 @@
             <div class="container-fluid col-9 border border-warning gx-5 p-5 container-grey">
                <form class="row g-3 needs-validation" novalidate id="pAltadeMateriaPrima">
                   <p class="h3" id="pAltadeMateriaPrima">Alta de Materia prima</p> 
-                  <div class="col-md-12">
-                     <label for="selectUsuario" class="form-label">Tipo de Usuario</label>
-                     <select id="selectUsuario" class="form-select" >
-                        <optionselected disabled value="">Seleccione un tipo de usuario</option>
-                        <option value="Produccion">Usuario de Producción</option>
-                        <option value="Almacen">Usuario de Almacén</option>
-                        <option value="Administrador">Administrador</option> 
-                     </select>
-                  </div>
+                     <!-- nombre materia prima -->
                      <div class="col-md-6">
-                        <label for="Insumos" class="form-label">Insumos</label>
-                        <select id="Insumos" class="form-select" >
+                        <label for="nombreMP" class="form-label">Nombre de la materia prima</label>
+                        <input type="text" class="form-control" id="nombreMP"  aria-label="nombreMP" required>
+                        <div class="invalid-feedback">Ingrese el nombre del insumo</div>
+                     </div>
+                     <!-- input de marca -->
+                     <div class="col-md-6">
+                        <label for="marcaMP" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="marcaMP"  aria-label="marcaMP" required>
+                        <div class="invalid-feedback">Debe ingresar la marca</div>
+                     </div>
+                     <!-- Tipo de insumo -->
+                     <div class="col-md-6">
+                        <label for="tipoInsumo" class="form-label">Tipo de insumo</label>
+                        <select id="tipoInsumo" class="form-select" required>
+                           <option selected disabled value="">Seleccione el insumo</option>
                            <option value="Azúcares">Azúcares</option>
                            <option value="Clarificantes">Clarificantes</option>
                            <option value="Extractos">Extractos</option>
@@ -98,23 +103,37 @@
                            <option value="Botellas">Botellas</option>
                            <option value="Tapas">Tapas</option>
                            <option value="Etiquetas">Etiquetas</option>
-                           
                         </select>
+                        <div class="invalid-feedback">Selecciona el tipo de insumo</div>
                      </div>
+                     <!-- Unidad de medida -->
                      <div class="col-md-6">
-                        <label for="Cantidad" class="form-label">Cantidad</label>
-                        <input type="text" class="form-control" id="inputCantidad" placeholder="Cantidad" aria-label="Cantidad">
+                        <label for="unidadMedida" class="form-label">Unidad de medida</label>
+                        <select id="unidadMedida" class="form-select" required>
+                           <option selected disabled value="">Seleccione la unidad de medida</option>
+                           <option value="Añadir">Gramos</option>
+                           <option value="Añadir">Cm cúbicos</option>
+                           <option value="Añadir">Unidad</option>
+                        </select>
+                        <div class="invalid-feedback">Selecciona la unidad de medida</div>
                      </div>
+                     <!-- Cantidad por empaque -->
                      <div class="col-md-6">
-                        <label for="Tipo" class="form-label">Tipo de Empaquetado</label>
-                        <input type="text" class="form-control" id="inputEmpaquetado" placeholder="Empaquetado" aria-label="Empaquetado">
+                        <label for="cantPorEmpaque" class="form-label">Cantidad por empaque</label>
+                        <input type="text" class="form-control" id="cantPorEmpaque"  aria-label="Cantidad por empaque" required>
+                        <div class="invalid-feedback">Ingrese la cantidad que trae el empaque</div>
                      </div>
+                     <!-- cbo seleccion de Proveedor -->
                      <div class="col-md-6">
-                        <label for="Proveedor" class="form-label">Proveedor</label>
-                        <input type="text" class="form-control" id="inputProveedor" placeholder="Proveedor" aria-label="Proveedor">
+                        <label for="selproveedor" class="form-label">Proveedor</label>
+                        <select id="selProveedor" class="form-select" required>
+                           <option selected disabled value="">Seleccione el proveedor</option>
+                           <option value="Añadir">Añadir</option>
+                        </select>
+                        <div class="invalid-feedback">Seleccione el proveedor. De no encontrarse en el listado, seleccione añadir</div>
                      </div>
                      <div class="col">
-                           <button class="btn btn-success col-sm-12  botonIngresar" type="button" id="btnIngresar" onclick="Ingresar();">Ingresar</button>
+                           <button class="btn btn-success col-sm-12  botonIngresar" type="submit" id="btnIngresar" onclick="Ingresar();">Ingresar</button>
                      </div>
                         </div>
                </form>

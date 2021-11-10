@@ -6,7 +6,7 @@
       <meta name="description" content="Página para cargar los pedidos realizados por los clientes">
       <meta name="keywords" content="Cerveza, artesanal, pedidos, clientes, beer, stock, control de stock"/>
       <link rel="icon" type="image/x-icon" href="assets/cup-straw.svg" />
-      <link rel="stylesheet" href="style.css">
+      
       <script src="js/scripts.js"></script>
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -17,55 +17,42 @@
    <body>
 
     <!--comienzo del menu-->
-    <div class="boton">
-      <span class="fas fa-bars"></span>
-       </div>
-       <nav class="sidebar ">
-          <div class="text">
-           <div class="left_area">
-             <h3>Beer <span>Stock</span></h3>
-           </div> 
-         </div>
-          
-         <!--sidebar start-->
-         <ul>
-         <div class="sidebar text-center" >
-         
-           <img src= "img/avatar-icon-png-12.jpg" class= "profile" alt="">
-           <h4>Usuario</h4>
-         
-            <!--menus-->
-             <li class="active"><a href="index.html">Inicio</a></li>
-             <li>
-                <a href="#" class="feat-boton">Cervezas
-                <span class="fas fa-caret-down first"></span>
-                </a>
-                <ul class="feat-show">
-                   <li><a href="stockCerveza.html">Tipos de Cervezas</a></li>
-                   <li><a href="recetas.html">Recetas</a></li>
-                   <li><a href="coccion.html">Cocción</a></li>
-                   <li><a href="pedidosClientes.html">Pedidos de Clientes</a></li>
-                </ul>
-             </li>
-             <li>
-                <a href="#" class="serv-boton">Materias Primas
-                <span class="fas fa-caret-down second"></span>
-                </a>
-                <!--submenus-->
-                <ul class="serv-show">
- 
-                   <li><a href="Stockmateriaprima.html">Stock</a></li>
-                   <li><a href="AltadeStockmateriaprima.html">Alta de M.P.</a></li>
- 
-                   <li><a href="proveedores.html">Proveedores</a></li>
-                </ul>
-             </li>
-             <li><a href="registroUsuarios.html">Usuarios</a></li>
-             <li><a href="contacto.html">Contacto</a></li>
-             <li><a href="login.html">Salir</a></li>
-            
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
           </ul>
-       </nav>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
        <!-- fin del menu, comienzo del contenido-->
      
       <div class="content">

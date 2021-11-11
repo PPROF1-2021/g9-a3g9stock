@@ -229,3 +229,16 @@ nav ul li a span.rotate {
     rgba(29, 29, 27, 1) 100%
   );
 }
+@media (max-width: 1199.98px)
+.main-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+.border-left-primary:{
+  border-left:0.25rem solid rgb(252, 214, 0)!important
+  border-left-width:0.25rem !important;
+  border-left-style: solid !important;
+  border-left-color:  rgb (252,214,0) !important;
+}

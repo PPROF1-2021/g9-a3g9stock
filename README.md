@@ -39,6 +39,6 @@ El usuario administrador podrá agregar usuarios nuevos en el sistema, modificar
 
 ## Modelo Relacional (no definitivo)
 
-![Modelo Relacional](https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/BDD/BBDD%20nueva.png)
+![Modelo Relacional](https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/Documentaci%C3%B3n/BDD/BBDD%20nueva.png)
 
 

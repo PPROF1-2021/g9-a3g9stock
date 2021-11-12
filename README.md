@@ -1,10 +1,12 @@
 
-<a href="url"><img src="https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/Codigo/assets/logo.png" align="left" height="300"></a>
+<a href="url"><img src="https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/assets/logo.png" align="left" height="300"></a>
 
 
 # Beer Friends Stock System
 ## Aplicación web para Control de Stock de Cervecerías Artesanales
 
+ [![Ver Online Badge](https://img.shields.io/badge/-Ver%20sitio%20online-orange?style=flatsquare&link=https://pprof1-2021.github.io/g9-a3g9stock/index.html)](https://pprof1-2021.github.io/g9-a3g9stock/index.html)
+ 
 **Perspectiva del producto:**
 El sistema *Beer Friends Stock System* será una aplicación web independiente de otras aplicaciones, enfocada a cubrir los requerimientos de control de 
 stock de empresas pyme dedicadas a la producción de cervezas artesanales. En el mismo los usuarios podrán cargar y modificar el stock de materias primas 
@@ -13,6 +15,7 @@ y elaboración de listado de pedidos.
 El usuario administrador podrá agregar usuarios nuevos en el sistema, modificar los permisos de los creados y de los existentes.
 
 <br><br>
+
 
 
 ### Aula 3 -  Grupo 9
@@ -39,6 +42,6 @@ El usuario administrador podrá agregar usuarios nuevos en el sistema, modificar
 
 ## Modelo Relacional (no definitivo)
 
-![Modelo Relacional](https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/BDD/BBDD%20nueva.png)
+![Modelo Relacional](https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/Documentaci%C3%B3n/BDD/BBDD%20nueva.png)
 
 

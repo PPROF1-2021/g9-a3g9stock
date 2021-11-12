@@ -1,3 +1,10 @@
+<%-- 
+    Document   : index
+    Created on : 11 nov. 2021, 20:16:45
+    Author     : Caro
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -9,6 +16,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="charts.js/chart-bar"/>
     <!--Font Awesome-->
     <link
       rel="stylesheet"
@@ -264,88 +272,263 @@
             </ul>
           </div>
         </nav>
+        
         <!-- /#cierre menú -->
 
+        <!-- Contenido de la página -->
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
 
-   
-      <div class="content">
-         <div class="header text-center text-white">
-            <div class="container-fluid col-9 border border-warning gx-5 p-5 border border-3 container-grey">
-               <h1>Tipos de Cervezas</h1>
-
-
-            
-            <div class="container fluid">
-                <div class="row">
-                    <div class="col-12 col-md-4 p-2">
-                        <div class="card w-70">
-                            <img src="assets/rubia.jpg" class="card-img-top img-responsive">
-                            <div class="card-body">
-                                <h5 class="card-text text-dark">Rubia Dorada</h5>
-                                <ul class="list-group">
-                                    <li class="list-group-item">330 cc <span
-                                            class="badge float-right bg-secondary">4</span></li>
-                                    <li class="list-group-item">600 cc <span
-                                            class="badge float-right bg-secondary">4</span>
-                                    </li>
-                                    <li class="list-group-item">1000 cc <span
-                                            class="badge float-right bg-secondary">4</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                    </div class="container fluid">
-                    <div class="col-12 col-md-4 p-2">
-                        <div class="card w-70">
-                            <img src="assets/roja.jpg" class="card-img-top img-responsive">
-                            <div class="card-body">
-                                <h5 class="card-text text-dark">Colorada</h5>
-                                <ul class="list-group">
-                                    <li class="list-group-item">330 cc <span
-                                            class="badge float-right bg-secondary">4</span></li>
-                                    <li class="list-group-item">600 cc <span
-                                            class="badge float-right bg-secondary">4</span>
-                                    </li>
-                                    <li class="list-group-item">1000 cc <span
-                                            class="badge float-right bg-secondary">4</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                    </div class="container fluid">
-                    <div class="col-12 col-md-4 p-2">
-                        <div class="card w-70">
-                            <img src="assets/negra.jpg" class="card-img-top img-responsive">
-                            <div class="card-body">
-                                <h5 class="card-text text-dark">Porter Outmeal</h5>
-                                <ul class="list-group">
-                                    <li class="list-group-item">330 cc. <span
-                                            class="badge float-right bg-secondary">4</span></li>
-                                    <li class="list-group-item">600 cc <span
-                                            class="badge float-right bg-secondary">4</span>
-                                    </li>
-                                    <li class="list-group-item">1000 cc<span
-                                            class="badge float-right bg-secondary">4</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-white">Panel de Control</h1>
+              <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i
+                      class="fas fa-download fa-sm text-dark-50"> </i> Reporte Generado</a>
+          </div>
+         <!-- Content Row -->
+         <div class="row">
+            <!-- ganancias Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="bg-light border-start border-warning border-5  Default shadow  h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning fw-bold text-uppercase mb-2">
+                        Ganancias (Mensuales)</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
                     </div>
+                    <div class="col-auto">
+                      <i class="fas fa-hand-holding-usd  text-warning fa-2x  "></i>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+            <!-- Stock materias primas Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="bg-light border-start border-info border-5  Default shadow  h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-info fw-bold text-uppercase mb-1">Stock Mat.Primas
+                </div>
+                <div class="row no-gutters align-items-center">
+                  <div class="col-auto">
+                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">30%</div>
+                  </div>
+                  <div class="col">
+                    <div class="progress progress-sm mr-2">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 30%" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-boxes text-info fa-2x"></i>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      
+      <!-- TAREAS Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="bg-light border-start border-danger border-5  Default shadow  h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-danger fw-bold text-uppercase mb-1">Tareas
+                </div>
+                <div class="row no-gutters align-items-center">
+                  <div class="col-auto">
+                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                  </div>
+                  <div class="col">
+                    <div class="progress progress-sm mr-2">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-clipboard-list text-danger fa-2x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- pedidos Card Example -->
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="bg-light border-start border-success border-5  Default shadow  h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-success fw-bold text-uppercase mb-1">
+                  Pedidos</div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-dolly text-success fa-2x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+               <!-- Content Row -->
+
+               <div class="row">
+
+            <!-- Content Row -->
+
+
+                <!-- Content Column -->
+                <div class="col-6 ">
+
+                    <!-- Project Card Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="small font-weight-bold">Server Migration <span
+                                    class="float-right">20%</span></h4>
+                            <div class="progress mb-4">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
+                                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h4 class="small font-weight-bold">Sales Tracking <span
+                                    class="float-right">40%</span></h4>
+                            <div class="progress mb-4">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
+                                    aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h4 class="small font-weight-bold">Customer Database <span
+                                    class="float-right">60%</span></h4>
+                            <div class="progress mb-4">
+                                <div class="progress-bar" role="progressbar" style="width: 60%"
+                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h4 class="small font-weight-bold">Payout Details <span
+                                    class="float-right">80%</span></h4>
+                            <div class="progress mb-4">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
+                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h4 class="small font-weight-bold">Account Setup <span
+                                    class="float-right">Complete!</span></h4>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                    
+                    <div class="col-6"></div> 
+                    </div> 
+                    <!-- Illustrations -->
+                      
+                      <div class="card shadow mb-4 pt-4 pb-2 ">
+                        <div class="card-header py-3 ">
+                            <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                    src="img/undraw_posting_photo.svg" alt="...">
+                            </div>
+                            <p>Add some quality, svg illustrations to your project courtesy of <a
+                                    target="_blank" rel="nofollow">unDraw</a>, a
+                                constantly updated collection of beautiful svg images that you can use
+                                completely free and without attribution!</p>
+                            <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
+                                unDraw &rarr;</a>
+                        </div>
+                    </div>
+
+                    
+
+          <div class="row my-5">
+            <h3 class="fs-4 mb-3 text-white">Ultimos Pedidos</h3>
+            <div class="col">
+              <table class="table bg-white rounded shadow-sm table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col" width="50">#</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Precio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>J Ipa</td>
+                    <td>Marcelo Perez</td>
+                    <td>$1200</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>J Roja</td>
+                    <td>Gastón Juarez</td>
+                    <td>$750</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>J Roja</td>
+                    <td>Alejandra Migueñuses</td>
+                    <td>$600</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Honey</td>
+                    <td>Gastón Juarez</td>
+                    <td>$3000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>J Bock</td>
+                    <td>Maricel Carrillo</td>
+                    <td>$1200</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Gold</td>
+                    <td>David Bowie</td>
+                    <td>$1800</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Pilsen</td>
+                    <td>Ernesto Cortazar</td>
+                    <td>$750</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>J Bock</td>
+                    <td>Maricel Carrillo</td>
+                    <td>$3600</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>J APA</td>
+                    <td>Anibal Casares</td>
+                    <td>$2550</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <br>
-    <br>
-    <br>
-   
-    
+    <!-- /#cierre contenido pagina -->
+
     <!-- Comienzo del footer-->
 
     <footer class="bg-dark text-white pt-2 pb-0 container-fluid">

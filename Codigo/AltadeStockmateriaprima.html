@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/x-icon" href="assets/cup-straw.svg" />
-    <!--Bootstrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <!--Font Awesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <script src="js/scripts.js"></script>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta
-      name="author"
-      content="Aula 3, Grupo 9 - Araya, Battistoni, Bima, Gentilini y Moyano "
-    />
-    <meta name="description" content="Página de inicio" />
-    <title>Beer Friends Stock Sistem</title>
-  </head>
-
-  <body>
-    <!-- Menú -->
-    <div class="d-flex" id="wrapper">
+<html lang="es" dir="ltr">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <link rel="icon" type="image/x-icon" href="assets/cup-straw.svg" />
+      <!--Bootstrap-->
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+      />
+      <!--Font Awesome-->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      />
+      <link rel="stylesheet" href="styles/styles.css" />
+      <script src="js/scripts.js"></script>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
+      <meta
+        name="author"
+        content="Aula 3, Grupo 9 - Araya, Battistoni, Bima, Gentilini y Moyano "
+      />
+      <title>Alta de Materia prima</title>
+    </head>
+   <body>
+     <!-- Menú -->
+     <div class="d-flex" id="wrapper">
       <div class="bg-black" id="sidebar-wrapper">
         <div
           class="
@@ -83,7 +81,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <a class="dropdown-item " href="stockCerveza.html"
+                  <a class="dropdown-item" href="stockCerveza.html"
                     >Stock de Cerveza</a
                   >
                 </li>
@@ -255,9 +253,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item disabled" href="#">Perfil</a></li>
-                  <li>
-                    <a class="dropdown-item disabled" href="#">Configuración</a>
-                  </li>
+                  <li><a class="dropdown-item disabled" href="#">Configuración</a></li>
                   <li><a class="dropdown-item" href="login.html">Salir</a></li>
                 </ul>
               </li>
@@ -266,86 +262,86 @@
         </nav>
         <!-- /#cierre menú -->
 
-
-   
       <div class="content">
-         <div class="header text-center text-white">
-            <div class="container-fluid col-9 border border-warning gx-5 p-5 border border-3 container-grey">
-               <h1>Tipos de Cervezas</h1>
-
-
-            
-            <div class="container fluid">
-                <div class="row">
-                    <div class="col-12 col-md-4 p-2">
-                        <div class="card w-70">
-                            <img src="assets/rubia.jpg" class="card-img-top img-responsive">
-                            <div class="card-body">
-                                <h5 class="card-text text-dark">Rubia Dorada</h5>
-                                <ul class="list-group">
-                                    <li class="list-group-item">330 cc <span
-                                            class="badge float-right bg-secondary">4</span></li>
-                                    <li class="list-group-item">600 cc <span
-                                            class="badge float-right bg-secondary">4</span>
-                                    </li>
-                                    <li class="list-group-item">1000 cc <span
-                                            class="badge float-right bg-secondary">4</span>
-                                    </li>
-                                </ul>
-                            </div>
+         <div class="header">
+         <br>
+            <!--formulario de alta de materia prima-->
+            <div class="container-fluid col-9 border border-warning gx-5 p-5 container-grey">
+               <form class="row g-3 needs-validation text-white" novalidate id="pAltadeMateriaPrima">
+                  <p class="h3" id="pAltadeMateriaPrima">Alta de Materia prima</p> 
+                     <!-- nombre materia prima -->
+                     <div class="col-md-6">
+                        <label for="nombreMP" class="form-label">Nombre de la materia prima</label>
+                        <input type="text" class="form-control" id="nombreMP"  aria-label="nombreMP" required>
+                        <div class="invalid-feedback">Ingrese el nombre del insumo</div>
+                     </div>
+                     <!-- input de marca -->
+                     <div class="col-md-6">
+                        <label for="marcaMP" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="marcaMP"  aria-label="marcaMP" required>
+                        <div class="invalid-feedback">Debe ingresar la marca</div>
+                     </div>
+                     <!-- Tipo de insumo -->
+                     <div class="col-md-6">
+                        <label for="tipoInsumo" class="form-label">Tipo de insumo</label>
+                        <select id="tipoInsumo" class="form-select" required>
+                           <option selected disabled value="">Seleccione el insumo</option>
+                           <option value="Azúcares">Azúcares</option>
+                           <option value="Clarificantes">Clarificantes</option>
+                           <option value="Extractos">Extractos</option>
+                           <option value="Kit Insumos">Kit Insumos</option>
+                           <option value="Kit Gluten Free">Kit Gluten Free</option>
+                           <option value="Levadura">Levadura</option>
+                           <option value="Limpieza">Limpieza</option>
+                           <option value="Limpieza de insumos">Limpieza de insumos</option>
+                           <option value="Lúlupo">Lúpulo</option>
+                           <option value="Malta">Malta</option>
+                           <option value="Saborizantes">Saborizantes</option>
+                           <option value="Sales">Sales</option>
+                           <option value="Botellas">Botellas</option>
+                           <option value="Tapas">Tapas</option>
+                           <option value="Etiquetas">Etiquetas</option>
+                        </select>
+                        <div class="invalid-feedback">Selecciona el tipo de insumo</div>
+                     </div>
+                     <!-- Unidad de medida -->
+                     <div class="col-md-6">
+                        <label for="unidadMedida" class="form-label">Unidad de medida</label>
+                        <select id="unidadMedida" class="form-select" required>
+                           <option selected disabled value="">Seleccione la unidad de medida</option>
+                           <option value="Añadir">Gramos</option>
+                           <option value="Añadir">Cm cúbicos</option>
+                           <option value="Añadir">Unidad</option>
+                        </select>
+                        <div class="invalid-feedback">Selecciona la unidad de medida</div>
+                     </div>
+                     <!-- Cantidad por empaque -->
+                     <div class="col-md-6">
+                        <label for="cantPorEmpaque" class="form-label">Cantidad por empaque</label>
+                        <input type="text" class="form-control" id="cantPorEmpaque"  aria-label="Cantidad por empaque" required>
+                        <div class="invalid-feedback">Ingrese la cantidad que trae el empaque</div>
+                     </div>
+                     <!-- cbo seleccion de Proveedor -->
+                     <div class="col-md-6">
+                        <label for="selproveedor" class="form-label">Proveedor</label>
+                        <select id="selProveedor" class="form-select" required>
+                           <option selected disabled value="">Seleccione el proveedor</option>
+                           <option value="Añadir">Añadir</option>
+                        </select>
+                        <div class="invalid-feedback">Seleccione el proveedor. De no encontrarse en el listado, seleccione añadir</div>
+                     </div>
+                     <div class="col">
+                           <button class="btn btn-success col-sm-12  botonIngresar" type="submit" id="btnIngresar" onclick="Ingresar();">Ingresar</button>
+                     </div>
                         </div>
-
-
-                    </div class="container fluid">
-                    <div class="col-12 col-md-4 p-2">
-                        <div class="card w-70">
-                            <img src="assets/roja.jpg" class="card-img-top img-responsive">
-                            <div class="card-body">
-                                <h5 class="card-text text-dark">Colorada</h5>
-                                <ul class="list-group">
-                                    <li class="list-group-item">330 cc <span
-                                            class="badge float-right bg-secondary">4</span></li>
-                                    <li class="list-group-item">600 cc <span
-                                            class="badge float-right bg-secondary">4</span>
-                                    </li>
-                                    <li class="list-group-item">1000 cc <span
-                                            class="badge float-right bg-secondary">4</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                    </div class="container fluid">
-                    <div class="col-12 col-md-4 p-2">
-                        <div class="card w-70">
-                            <img src="assets/negra.jpg" class="card-img-top img-responsive">
-                            <div class="card-body">
-                                <h5 class="card-text text-dark">Porter Outmeal</h5>
-                                <ul class="list-group">
-                                    <li class="list-group-item">330 cc. <span
-                                            class="badge float-right bg-secondary">4</span></li>
-                                    <li class="list-group-item">600 cc <span
-                                            class="badge float-right bg-secondary">4</span>
-                                    </li>
-                                    <li class="list-group-item">1000 cc<span
-                                            class="badge float-right bg-secondary">4</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
+               </form>
             </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
-   
-    
+            
+<br>
+<br>
+
+              
+         <!-- Comienzo del footer-->
     <!-- Comienzo del footer-->
 
     <footer class="bg-dark text-white pt-2 pb-0 container-fluid">
@@ -501,15 +497,56 @@
         </div>
       </div>
     </footer>
+         <!-- fin del footer-->
+          </div>
+          
+     
+        
+   <!-- script del menú -->     
+      <script>
+         $('.boton').click(function(){
+           $(this).toggleClass("click");
+           $('.sidebar').toggleClass("show");
+         });
+           $('.feat-boton').click(function(){
+             $('nav ul .feat-show').toggleClass("show");
+             $('nav ul .first').toggleClass("rotate");
+           });
+           $('.serv-boton').click(function(){
+             $('nav ul .serv-show').toggleClass("show1");
+             $('nav ul .second').toggleClass("rotate");
+           });
+           $('nav ul li').click(function(){
+             $(this).addClass("active").siblings().removeClass("active");
+           });
+      </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      var el = document.getElementById('wrapper');
-      var toggleButton = document.getElementById('menu-toggle');
+   <!-- Validaciones en bootstrap-->
+   <script>
+      (function () {
+        'use strict';
 
-      toggleButton.onclick = function () {
-        el.classList.toggle('toggled');
-      };
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            'submit',
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add('was-validated');
+            },
+            false
+          );
+        });
+      })();
     </script>
-  </body>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    </body>
 </html>

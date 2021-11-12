@@ -49,6 +49,16 @@ function validarRegUsuario() {
     return false;
   }
 
+  //valido que el email sea valido:
+  if (
+    !/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
+      email
+    )
+  ) {
+    alert('Debes ingresar un email válido.');
+    return false;
+  }
+
   //verifico que el telefono sea numerico primero y que contenga diez digitos en el else if
   if (isNaN(telef)) {
     alert('El campo télefono debe contener un número de contacto válido');
@@ -60,16 +70,6 @@ function validarRegUsuario() {
     return false;
   }
 
-  //valido que el email sea valido:
-  if (
-    !/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
-      email
-    )
-  ) {
-    alert('Debes ingresar un email válido.');
-    return false;
-  }
-
   //verifico si es mayor de 18 años
   if (calcularEdad(fNacim) < 18) {
     alert(
@@ -77,6 +77,8 @@ function validarRegUsuario() {
     );
     return false;
   }
+
+  alert('registro completado exitosamente');
 }
 
 //permite calcular la edad para verificar si la persona es mayor de 18 años

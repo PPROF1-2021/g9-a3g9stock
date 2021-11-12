@@ -16,8 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="js/scripts.js"></script> 
-    <script src="js/funcionesGrupo9.js"></script>
+    <script src="js/scripts.js"></script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -267,119 +266,15 @@
           </div>
         </nav>
         <!-- /#cierre menú -->
-
-     
       <div class="content">
          <div class="header">
-          <div class=""> 
-           
-     <!-- Formulario  -->
- 
-     <div class="container-fluid col-9 border border-warning gx-5 p-5 border border-3 container-grey ">
-      <form  action="confirmacion.html" method="Post" class="row g-3 was-validated text-center text-white" id="registroDeUsuario"  onsubmit="return validarRegUsuario() ">
-         <p class="h1" id="pRegistroUsuario">Registro de Usuario</p> 
-         
-         <!--nombre-->
-         <div class="col-md-6">
-            <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" minlength="2"  aria-label="Nombre" required>
-         </div>
-         
-         <!--nombre-->
-         <div class="col-md-6">
-            <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" minlength="2" aria-label="Apellido" required>
-         </div>
-         
-         <!-- Email -->
-         <div class="col-md-6">
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email" aria-label="Email" required>
-         </div>
-         
-         <!-- Contraseña -->
-         <div class="col-md-6">
-            <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña" aria-label="Contrasenia" required>
-         </div>
-         
-         <!--teléfono-->
-         <div class="col-md-6">
-            <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono (Sin 0 ni 15)" aria-label="Teléfono" required>
-         </div>
-         
-         <!-- direccion -->
-         <div class="col-md-6">
-            <input type="Dirección" class="form-control" id="inputDireccion" placeholder="Dirección" aria-label="Dirección" required>
-         </div>
-         
-         <!-- Fecha de nacimiento-->
-         <div class="col-md-6">
-            <label for="inputFNacim" class="form-label">Fecha de Nacimiento</label>
-            <input type="date" class="form-control" id="inputFNacim" required>
-         </div>
-         
-         <!--Provincia-->
-         <div class="col-md-6">
-            <label for="selectProvincia" class="form-label">Provincia</label>
-            <select id="selectProvincia" class="form-select" required>
-               <option selected disabled value="">Seleccione Provincia</option>
-               <option value="Córdoba">Córdoba</option>
-               <option value="Buenos Aires">Buenos Aires</option>
-               <option value="Capital Federal">Capital Federal</option>
-               <option value="Catamarca">Catamarca</option>
-               <option value="Chaco">Chaco</option>
-               <option value="Chubut">Chubut</option>
-               <option value="Corrientes">Corrientes</option>
-               <option value="Entre Ríos">Entre Ríos</option>
-               <option value="Formosa">Formosa</option>
-               <option value="Jujuy">Jujuy</option>
-               <option value="La Pampa">La Pampa</option>
-               <option value="La Rioja">La Rioja</option>
-               <option value="Mendoza">Mendoza</option>
-               <option value="Misiones">Misiones</option>
-               <option value="Neuquén">Neuquén</option>
-               <option value="Río Negro">Río Negro</option>
-               <option value="Salta">Salta</option>
-               <option value="San Juan">San Juan</option>
-               <option value="San Luis">San Luis</option>
-               <option value="Santa Cruz">Santa Cruz</option>
-               <option value="Santa Fe">Santa Fe</option>
-               <option value="Santiago del Estero">Santiago del Estero</option>
-               <option value="Tierra del Fuego">Tierra del Fuego</option>
-               <option value="Tucumán">Tucumán</option>
-            </select>
-          
-         </div>
-    
-         <div class="col-md-12">
-            <label for="selectUsuario" class="form-label">Tipo de Usuario</label>
-            <select id="selectUsuario" class="form-select" required>
-               <option selected disabled value="">Seleccione un tipo de usuario</option>
-               <option value="Produccion">Usuario de Producción</option>
-               <option value="Almacen">Usuario de Almacén</option>
-               <option value="Administrador">Administrador</option>
-            </select>
-           
-        </div>
-
-        <div class="col">
-            <button class="btn btn-success col-sm-12  botonEnviar" type="submit" id="btnBorrar" onclick="borrarRegistroUsuarios();">Borrar</button>
-        </div>
-
-        <div class="col">
-            <button class="btn btn-success col-sm-12 botonEnviar" type="submit" id="btnResumen" >Guardar</button>
-          </div>
-        </div>
+            <h1 class= "container text-white text-center">El usuario se creó correctamente</h1>
       
-      </form>
-    </div>
-  
-  
-      <!-- fin de Formulario  -->
-     
-  <br>
-  <br>
-  <br>
-
-          
-
+   
+      <br>
+      <br>
+      <br>
+      
 <!-- Comienzo del footer-->
 <footer class="bg-dark text-white pt-2 pb-0 container-fluid">
   <div class="container">
@@ -401,7 +296,6 @@
           Insumos, Stock, Ventas y mucho más..
         </p>
       </div>
-
 
       <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text">
         <h5
@@ -538,6 +432,13 @@
 <!-- fin del footer-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
-  
+    <script>
+      var el = document.getElementById('wrapper');
+      var toggleButton = document.getElementById('menu-toggle');
+
+      toggleButton.onclick = function () {
+        el.classList.toggle('toggled');
+      };
+    </script>
   </body>
 </html>

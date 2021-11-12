@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }); // forEach
 });
 // DOMContentLoaded  end
-
+/*
 function borrarRegistroUsuarios() {
   document.getElementById('inputNombre').value = '';
   document.getElementById('inputApellido').value = '';
@@ -97,7 +97,7 @@ function validarRegUsuario() {
     return false;
   }
 }
-
+*/
 //validacion del formulario de contacto
 function borrarCamposComent() {
   document.getElementById('inNombreComent').value = '';

@@ -16,7 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <link rel="stylesheet" href="styles/styles.css" />
-   <!-- <script src="js/scripts.js"></script> -->
+    <script src="js/scripts.js"></script> 
     <script src="js/funcionesGrupo9.js"></script>
     <meta
       name="viewport"
@@ -276,44 +276,45 @@
      <!-- Formulario  -->
  
      <div class="container-fluid col-9 border border-warning gx-5 p-5 border border-3 container-grey ">
-      <form class="row g-3 needs-validation text-center text-white" novalidate id="registroDeUsuario">
+      <form class="row g-3 was-validated text-center text-white" id="registroDeUsuario">
          <p class="h1" id="pRegistroUsuario">Registro de Usuario</p> 
+         
          <!--nombre-->
          <div class="col-md-6">
-            <input type="text" class="form-control" id="inputNombre" placeholder="Nombre"  aria-label="Nombre" required>
-            <div class="invalid-feedback">Ingrese el nombre</div>
+            <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" minlength="2"  aria-label="Nombre" required>
          </div>
+         
          <!--nombre-->
          <div class="col-md-6">
-            <input type="text" class="form-control" id="inputApellido" placeholder="Apellido"  aria-label="Apellido" required>
-            <div class="invalid-feedback">Ingrese el Apellido</div>
+            <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" minlength="2" aria-label="Apellido" required>
          </div>
+         
          <!-- Email -->
          <div class="col-md-6">
             <input type="email" class="form-control" id="inputEmail" placeholder="Email" aria-label="Email" required>
-            <div class="invalid-feedback">Ingrese un email válido</div>
          </div>
+         
          <!-- Contraseña -->
          <div class="col-md-6">
             <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña" aria-label="Contrasenia" required>
-            <div class="invalid-feedback">Ingrese una contraseña</div>
          </div>
+         
          <!--teléfono-->
          <div class="col-md-6">
             <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono (Sin 0 ni 15)" aria-label="Teléfono" required>
-            <div class="invalid-feedback">Debe ingresar un teléfono de contacto</div>
          </div>
+         
          <!-- direccion -->
          <div class="col-md-6">
             <input type="Dirección" class="form-control" id="inputDireccion" placeholder="Dirección" aria-label="Dirección" required>
-            <div class="invalid-feedback">Ingrese la dirección</div>   
          </div>
+         
          <!-- Fecha de nacimiento-->
          <div class="col-md-6">
             <label for="inputFNacim" class="form-label">Fecha de Nacimiento</label>
             <input type="date" class="form-control" id="inputFNacim" required>
-            <div class="invalid-feedback">Seleccione la fecha de nacimiento</div>
          </div>
+         
          <!--Provincia-->
          <div class="col-md-6">
             <label for="selectProvincia" class="form-label">Provincia</label>
@@ -344,7 +345,7 @@
                <option value="Tierra del Fuego">Tierra del Fuego</option>
                <option value="Tucumán">Tucumán</option>
             </select>
-            <div class="invalid-feedback">Seleccione una provincia</div>
+          
          </div>
     
          <div class="col-md-12">
@@ -355,7 +356,7 @@
                <option value="Almacen">Usuario de Almacén</option>
                <option value="Administrador">Administrador</option>
             </select>
-            <div class="invalid-feedback">Seleccione el tipo de usuario</div>
+           
         </div>
         <div class="col">
             <button class="btn btn-success col-sm-12  botonEnviar" type="submit" id="btnBorrar" onclick="borrarRegistroUsuarios();">Borrar</button>
@@ -533,27 +534,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      //Script de validaciones en bootstrap
-      (function () {
-        'use strict'
-      
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.querySelectorAll('.needs-validation')
-      
-        // Loop over them and prevent submission
-        Array.prototype.slice.call(forms)
-          .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-              if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-              }
-      
-              form.classList.add('was-validated')
-            }, false)
-          })
-      })()
-       </script>
+  
   </body>
 </html>

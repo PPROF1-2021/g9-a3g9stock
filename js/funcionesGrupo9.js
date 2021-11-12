@@ -21,7 +21,7 @@ function validarRegUsuario() {
   provincia = document.getElementById('selectProvincia').selectedIndex;
   tipoUsuario = document.getElementById('selectUsuario').selectedIndex;
 
-  //verifico que todos los campos contengan datos (doble validación porque se hace con bootstrap previamente):
+  //verifico que todos los campos contengan datos, si no muestro un alert:
   if (
     nombre === '' ||
     apellido === '' ||
@@ -60,7 +60,7 @@ function validarRegUsuario() {
     return false;
   }
 
-  //valido que el email sea valido (se hace también previamente con bootstrap):
+  //valido que el email sea valido:
   if (
     !/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
       email
@@ -69,6 +69,29 @@ function validarRegUsuario() {
     alert('Debes ingresar un email válido.');
     return false;
   }
+
+  //verifico si es mayor de 18 años
+  if (calcularEdad(fNacim) < 18) {
+    alert(
+      'Revise la fecha de nacimiento. El empleado debe ser mayor de 18 a\u00f1os'
+    );
+    return false;
+  }
+}
+
+//permite calcular la edad para verificar si la persona es mayor de 18 años
+function calcularEdad(fechaNac) {
+  let hoy = new Date();
+  let fechaNacimiento = new Date(fechaNac);
+  let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+  let diferenciaMeses = hoy.getMonth() - fechaNacimiento.getMonth();
+  if (
+    diferenciaMeses < 0 ||
+    (diferenciaMeses === 0 && hoy.getDate() < fechaNacimiento.getDate())
+  ) {
+    edad--;
+  }
+  return edad;
 }
 
 //funcion que limpia los campos del formulario

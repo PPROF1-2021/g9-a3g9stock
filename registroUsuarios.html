@@ -275,50 +275,50 @@
            
      <!-- Formulario  -->
  
-     <div class="container-fluid col-9 border border-warning gx-5 p-5 border border-3 container-grey ">
-      <form  action="confirmacion.html" method="Post" class="row g-3 was-validated text-center text-white" id="registroDeUsuario"  onsubmit="return validarRegUsuario() ">
+     <div class="container-fluid col-9 border border-warning gx-5 p-5 border border-3 container-grey">
+      <form  action="confirmacion.php" method="Post" class="row g-3 was-validated text-center text-white" id="registroDeUsuario"  onsubmit="return validarRegUsuario() ">
          <p class="h1" id="pRegistroUsuario">Registro de Usuario</p> 
          
          <!--nombre-->
          <div class="col-md-6">
-            <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" minlength="2"  aria-label="Nombre" required>
+            <input name="inputNombre" type="text" class="form-control" id="inputNombre" placeholder="Nombre" minlength="2"  aria-label="Nombre" required>
          </div>
          
          <!--nombre-->
          <div class="col-md-6">
-            <input type="text" class="form-control" id="inputApellido" placeholder="Apellido" minlength="2" aria-label="Apellido" required>
+            <input name="inputApellido" type="text" class="form-control" id="inputApellido" placeholder="Apellido" minlength="2" aria-label="Apellido" required>
          </div>
          
          <!-- Email -->
          <div class="col-md-6">
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email" aria-label="Email" required>
+            <input name="inputEmail" type="email" class="form-control" id="inputEmail" placeholder="Email" aria-label="Email" required>
          </div>
          
          <!-- Contraseña -->
          <div class="col-md-6">
-            <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña" aria-label="Contrasenia" required>
+            <input name="inputPassword" type="password" class="form-control" id="inputPassword" placeholder="Contraseña" aria-label="Contrasenia" required>
          </div>
          
          <!--teléfono-->
          <div class="col-md-6">
-            <input type="text" class="form-control" id="inputTelefono" placeholder="Teléfono (Sin 0 ni 15)" aria-label="Teléfono" required>
+            <input name="inputTelefono" type="text" class="form-control" id="inputTelefono" placeholder="Teléfono (Sin 0 ni 15)" aria-label="Teléfono" required>
          </div>
          
          <!-- direccion -->
          <div class="col-md-6">
-            <input type="Dirección" class="form-control" id="inputDireccion" placeholder="Dirección" aria-label="Dirección" required>
+            <input name="inputDireccion" type="Dirección" class="form-control" id="inputDireccion" placeholder="Dirección" aria-label="Dirección" required>
          </div>
          
          <!-- Fecha de nacimiento-->
          <div class="col-md-6">
             <label for="inputFNacim" class="form-label">Fecha de Nacimiento</label>
-            <input type="date" class="form-control" id="inputFNacim" required>
+            <input name="inputFNacim"  type="date" class="form-control" id="inputFNacim" required>
          </div>
          
          <!--Provincia-->
          <div class="col-md-6">
             <label for="selectProvincia" class="form-label">Provincia</label>
-            <select id="selectProvincia" class="form-select" required>
+            <select name="selectProvincia" id="selectProvincia" class="form-select" required>
                <option selected disabled value="">Seleccione Provincia</option>
                <option value="Córdoba">Córdoba</option>
                <option value="Buenos Aires">Buenos Aires</option>
@@ -350,7 +350,7 @@
     
          <div class="col-md-12">
             <label for="selectUsuario" class="form-label">Tipo de Usuario</label>
-            <select id="selectUsuario" class="form-select" required>
+            <select name="selectUsuario" id="selectUsuario" class="form-select" required>
                <option selected disabled value="">Seleccione un tipo de usuario</option>
                <option value="Produccion">Usuario de Producción</option>
                <option value="Almacen">Usuario de Almacén</option>

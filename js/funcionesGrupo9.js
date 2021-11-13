@@ -108,3 +108,15 @@ function borrarRegistroUsuarios() {
   document.getElementById('selectProvincia').selectedIndex = 0;
   document.getElementById('selectUsuario').selectedIndex = 0;
 }
+
+function redireccion() {
+  var tiempo = 4000;
+
+  //mensaje
+  document.getElementById('mensaje').innerHTML =
+    'Espere, en breve será redirigido a la pagina de inicio.';
+
+  setTimeout(function () {
+    window.location = 'index.html';
+  }, tiempo);
+}

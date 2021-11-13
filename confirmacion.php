@@ -268,8 +268,57 @@
         <!-- /#cierre menú -->
       <div class="content">
          <div class="header">
-            <h1 class= "container text-white text-center">El usuario se creó correctamente</h1>
-      
+         <div class="container-fluid col-9 border border-warning gx-5 p-5 border border-3 container-grey text-white">
+            <h1 class= "container text-white text-center">El usuario se registró correctamente:</h1>
+            
+            <table class="table">
+           
+           <?php
+
+              $nombre = $_POST["inputNombre"];
+              $apellido = $_POST["inputApellido"];
+              $email = $_POST["inputEmail"];
+              $telefono = $_POST["inputTelefono"];
+              $direccion = $_POST["inputDireccion"];
+              $fNac = $_POST["inputFNacim"];
+              $provincia = $_POST["selectProvincia"];
+              $tipoUsuario = $_POST["selectUsuario"];
+              
+              print "  <tr>";
+              print "  <p>Nombre: <strong>$nombre</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+              
+              print "  <tr>";
+              print "  <p>Apellido: <strong>$apellido</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+              print "  <tr>";
+              print "  <p>Teléfono: <strong>$telefono</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+              print "  <tr>";
+              print "  <p>Fecha de nacimiento: <strong>$fNac</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+              print "  <tr>";
+              print "  <p>Dirección: <strong>$direccion</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+              print "  <tr>";
+              print "  <p>Provincia: <strong>$provincia</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+              print "  <tr>";
+              print "  <p>Tipo de usuario: <strong>$tipoUsuario</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+             
+            ?>
+            </table>
+            <p class= "container text-white text-center h6">En unos segundos será redireccionado a la página principal</p>
+        </div>
+        </div>
    
       <br>
       <br>
@@ -430,6 +479,16 @@
   </div>
 </footer>
 <!-- fin del footer-->
+
+
+    <script>
+      //script de redireccionamiento
+       var tiempo = 4000;
+        setTimeout(function () {
+          window.location = 'index.html';
+        }, tiempo);
+
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <script>

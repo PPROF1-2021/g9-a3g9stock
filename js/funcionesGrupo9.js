@@ -49,6 +49,16 @@ function validarRegUsuario() {
     return false;
   }
 
+  //valido que el email sea valido:
+  if (
+    !/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
+      email
+    )
+  ) {
+    alert('Debes ingresar un email válido.');
+    return false;
+  }
+
   //verifico que el telefono sea numerico primero y que contenga diez digitos en el else if
   if (isNaN(telef)) {
     alert('El campo télefono debe contener un número de contacto válido');
@@ -60,16 +70,6 @@ function validarRegUsuario() {
     return false;
   }
 
-  //valido que el email sea valido:
-  if (
-    !/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
-      email
-    )
-  ) {
-    alert('Debes ingresar un email válido.');
-    return false;
-  }
-
   //verifico si es mayor de 18 años
   if (calcularEdad(fNacim) < 18) {
     alert(
@@ -77,6 +77,8 @@ function validarRegUsuario() {
     );
     return false;
   }
+
+  alert('registro completado exitosamente');
 }
 
 //permite calcular la edad para verificar si la persona es mayor de 18 años
@@ -105,4 +107,16 @@ function borrarRegistroUsuarios() {
   document.getElementById('inputFNacim').value = 'AAAA-MM-DD';
   document.getElementById('selectProvincia').selectedIndex = 0;
   document.getElementById('selectUsuario').selectedIndex = 0;
+}
+
+function redireccion() {
+  var tiempo = 4000;
+
+  //mensaje
+  document.getElementById('mensaje').innerHTML =
+    'Espere, en breve será redirigido a la pagina de inicio.';
+
+  setTimeout(function () {
+    window.location = 'index.html';
+  }, tiempo);
 }

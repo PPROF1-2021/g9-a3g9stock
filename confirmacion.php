@@ -267,89 +267,63 @@
         </nav>
         <!-- /#cierre menú -->
       <div class="content">
-         <div class="header text-center text-white">
-            <div class="container-fluid col-9 border border-warning  p-5 container-grey ">
-               <h1>Recetas</h1>
+         <div class="header">
+         <div class="container-fluid col-9 border border-warning gx-5 p-5 border border-3 container-grey text-white">
+            <h1 class= "container text-white text-center">El usuario se registró correctamente:</h1>
+            
+            <table class="table">
+           
+           <?php
 
-            <div class="mb-3 m-2 rounded bg-ligth border bordersecondary col-8 mx-auto">
-               <h5 class="card-title">Rubia Dorada</h5>
-               <h6 class="card-subtitle mb-2 text-muted">Ingredientes</h6>
-               <ul class="list-group">
-                  <li class="list-group-item">Malta Pilsen 5 kg</li>
-                  <li class="list-group-item">Irish Moss</li>
-                  <li class="list-group-item">Lupulo Cascade 20g</li>
-                  <li class="list-group-item">Levadura Ale</li>
-               </ul><br>
-               <h6 class="card-subtitle mb-2 text-muted">Elaboración</h6>
-               <p class="card-text">Maceración: Macerar la malta a 66 ºC durante 1 hora para obtener el mosto. Usar 15 litros
-                  de agua.<br>
-                  Ebullición: Al mosto obtenido agregarle agua hasta alcanzar los 27 litros. Hervir durante 60 minutos
-                  añadiendo el lúpulo en el momento indicado anteriormente.<br>
-                  Fermentación: Fermentar durante unos 7 días con levadura de fermentación alta (18 a 24 ºC).<br>
-                  Acondicionamiento: Cebar y acondicionar a temperatura ambiente en botella durante 2 semanas para carbonatar.
-               </p>
+              $nombre = $_POST["inputNombre"];
+              $apellido = $_POST["inputApellido"];
+              $email = $_POST["inputEmail"];
+              $telefono = $_POST["inputTelefono"];
+              $direccion = $_POST["inputDireccion"];
+              $fNac = $_POST["inputFNacim"];
+              $provincia = $_POST["selectProvincia"];
+              $tipoUsuario = $_POST["selectUsuario"];
+              
+              print "  <tr>";
+              print "  <p>Nombre: <strong>$nombre</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+              
+              print "  <tr>";
+              print "  <p>Apellido: <strong>$apellido</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+              print "  <tr>";
+              print "  <p>Teléfono: <strong>$telefono</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+              print "  <tr>";
+              print "  <p>Fecha de nacimiento: <strong>$fNac</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+              print "  <tr>";
+              print "  <p>Dirección: <strong>$direccion</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+              print "  <tr>";
+              print "  <p>Provincia: <strong>$provincia</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+              print "  <tr>";
+              print "  <p>Tipo de usuario: <strong>$tipoUsuario</strong>.</p>\n";
+              print "  </tr>";
+              print "\n";
+             
+            ?>
+            </table>
+            <p class= "container text-white text-center h6">En unos segundos será redireccionado a la página principal</p>
+        </div>
+        </div>
+   
+      <br>
+      <br>
+      <br>
       
-            </div>
-      
-      
-            <div>
-               <div class="mb-3 m-2 rounded bg-ligth border bordersecondary col-8 mx-auto">
-               <h5 class="card-title">Colorada</h5>
-               <h6 class="card-subtitle mb-2 text-muted">Ingredientes</h6>
-               <ul class="list-group">
-                  <li class="list-group-item">Malta Pilsen 5 kg</li>
-                  <li class="list-group-item">Malta Caramelo 250 gr</li>
-                  <li class="list-group-item">Irish Moss</li>
-                  <li class="list-group-item">Lupulo Cascade 20g</li>
-                  <li class="list-group-item">Levadura Ale</li>
-               </ul><br>
-               <h6 class="card-subtitle mb-2 text-muted">Elaboración</h6>
-               <p class="card-text">Maceración: Macerar la malta a 66 ºC durante 1 hora para obtener el mosto. Usar 15 litros
-                  de agua.<br>
-                  Ebullición: Al mosto obtenido agregarle agua hasta alcanzar los 27 litros. Hervir durante 60 minutos
-                  añadiendo el lúpulo en el momento indicado anteriormente.<br>
-                  Fermentación: Fermentar durante unos 7 días con levadura de fermentación alta (18 a 24 ºC).<br>
-                  Acondicionamiento: Cebar y acondicionar a temperatura ambiente en botella durante 2 semanas para carbonatar.
-               </p>
-      
-            </div>
-      
-      
-            <div>
-               <div class="mb-3 m-2 rounded bg-ligth border bordersecondary col-8 mx-auto">
-               <h5 class="card-title">Porter Outmeal</h5>
-               <h6 class="card-subtitle mb-2 text-muted">Ingredientes</h6>
-               <ul class="list-group">
-                  <li class="list-group-item">Malta Pilsen 5 kg</li>
-                  <li class="list-group-item">Malta Chocolate 250 gr</li>
-                  <li class="list-group-item">Malta Caramelo 250 gr</li>
-                  <li class="list-group-item">Malta Tostada 250 gr</li>
-                  <li class="list-group-item">Avena 250 gr</li>
-                  <li class="list-group-item">Irish Moss</li>
-                  <li class="list-group-item">Lupulo Cascade 20g</li>
-                  <li class="list-group-item">Lupulo Fuggle 20g</li>
-                  <li class="list-group-item">Levadura Ale</li>
-               </ul><br>
-               <h6 class="card-subtitle mb-2 text-muted">Elaboración</h6>
-               <p class="card-text">Maceración: Macerar la malta a 66 ºC durante 1 hora para obtener el mosto. Usar 15 litros
-                  de agua.<br>
-                  Ebullición: Al mosto obtenido agregarle agua hasta alcanzar los 27 litros. Hervir durante 60 minutos
-                  añadiendo el lúpulo en el momento indicado anteriormente.<br>
-                  Fermentación: Fermentar durante unos 7 días con levadura de fermentación alta (18 a 24 ºC).<br>
-                  Acondicionamiento: Cebar y acondicionar a temperatura ambiente en botella durante 2 semanas para carbonatar.
-               </p>
-      
-            </div>
-
-      </div>
-     
-
-
-      
-         </div>
-  
-         
-
 <!-- Comienzo del footer-->
 <footer class="bg-dark text-white pt-2 pb-0 container-fluid">
   <div class="container">
@@ -505,6 +479,16 @@
   </div>
 </footer>
 <!-- fin del footer-->
+
+
+    <script>
+      //script de redireccionamiento
+       var tiempo = 4000;
+        setTimeout(function () {
+          window.location = 'index.html';
+        }, tiempo);
+
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <script>

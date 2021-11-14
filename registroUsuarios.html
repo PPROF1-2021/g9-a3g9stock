@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/x-icon" href="assets/cup-straw.svg" />
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="js/scripts.js"></script> 
+    <script src="js/funcionesGrupo9.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="author"
+      content="Aula 3, Grupo 9 - Araya, Battistoni, Bima, Gentilini y Moyano "
+    />
+    <meta name="description" content="Página de inicio" />
+    <title>Beer Friends Stock Sistem</title>
+  </head>
+
+  <body>
+    <!-- Menú -->
+    <div class="d-flex" id="wrapper">
+      <div class="bg-black" id="sidebar-wrapper">
+        <div
+          class="
+            sidebar-heading
+            text-center
+            py-4
+            primary-text
+            fs-4
+            fw-bold
+            text-uppercase
+            border-bottom
+          "
+        >
+          <i class="fas fa-beer me-2"></i>BEER STOCK
+        </div>
+        <div class="list-group list-group-flush my-3">
+          <a
+            href="index.html"
+            class="
+              list-group-item list-group-item-action
+              bg-transparent
+              second-text
+              fw-bold
+            "
+          >
+            <i class="fas fa-project-diagram me-2"></i>Inicio</a
+          >
+
+          <!--submenu cervezas -->
+          <ul class="navbar-nav ms-4">
+            <li class="nav-item dropdown align-items-center">
+              <a
+                class="
+                  nav-link
+                  dropdown-toggle
+                  second-text
+                  fw-bold
+                  list-group-item list-group-item-action
+                  bg-transparent
+                  second-text
+                  fw-bold
+                "
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-wine-bottle me-2"></i>Cervezas
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item " href="stockCerveza.html"
+                    >Stock de Cerveza</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="recetas.html">Recetas</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="coccion.html">Cocción</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="pedidosClientes.html"
+                    >Pedidos de Clientes</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <!--submenu materias primas -->
+          <ul class="navbar-nav ms-4">
+            <li class="nav-item dropdown align-items-center">
+              <a
+                class="
+                  nav-link
+                  dropdown-toggle
+                  second-text
+                  fw-bold
+                  list-group-item list-group-item-action
+                  bg-transparent
+                  second-text
+                  fw-bold
+                "
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-boxes me-2"></i>Materias Primas
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="Stockmateriaprima.html"
+                    >Stock</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="AltadeStockmateriaprima.html"
+                    >Alta de M.P.</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="proveedores.html"
+                    >Proveedores</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <!--submenu contacto  -->
+          <a
+            href="contacto.html"
+            class="
+              list-group-item list-group-item-action
+              bg-transparent
+              second-text
+              fw-bold
+            "
+          >
+            <i class="fas fa-address-book me-2"></i>Contacto</a
+          >
+          <!--submenu Panel de control -->
+          <ul class="navbar-nav ms-4">
+            <li class="nav-item dropdown align-items-center">
+              <a
+                class="
+                  nav-link
+                  dropdown-toggle
+                  second-text
+                  fw-bold
+                  list-group-item list-group-item-action
+                  bg-transparent
+                  second-text
+                  fw-bold
+                  active
+                "
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fas fa-tachometer-alt me-2"></i>Panel de Control
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="registroUsuarios.html"
+                    >Registro de Usuario</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item disabled" href="#"
+                    >Administración de Usuarios</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <!--submenu Logout -->
+          <a
+            href="#"
+            class="
+              list-group-item list-group-item-action
+              bg-transparent
+              text-danger
+              fw-bold
+            "
+          >
+            <i class="fas fa-power-off me-2"></i>Logout</a
+          >
+        </div>
+      </div>
+
+      <!-- Menú y nombre de usuario de margen superior -->
+      <div id="page-content-wrapper">
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4"
+        >
+          <div class="d-flex align-items-center">
+            <i
+              class="fas fa-align-left primary-text fs-4 me-3"
+              id="menu-toggle"
+            ></i>
+            <h2 class="fs-2 m-0">Dashboard</h2>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="
+                    nav-link
+                    dropdown-toggle
+                    second-text
+                    fw-bold
+                    text-warning
+                  "
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-user me-2"></i>Ana Perez
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item disabled" href="#">Perfil</a></li>
+                  <li>
+                    <a class="dropdown-item disabled" href="#">Configuración</a>
+                  </li>
+                  <li><a class="dropdown-item" href="login.html">Salir</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- /#cierre menú -->
+
+     
+      <div class="content">
+         <div class="header">
+          <div class=""> 
+           
+     <!-- Formulario  -->
+ 
+     <div class="container-fluid col-9 border border-warning gx-5 p-5 border border-3 container-grey">
+      <form  action="confirmacion.php" method="Post" class="row g-3 was-validated text-center text-white" id="registroDeUsuario"  onsubmit="return validarRegUsuario() ">
+         <p class="h1" id="pRegistroUsuario">Registro de Usuario</p> 
+         
+         <!--nombre-->
+         <div class="col-md-6">
+            <input name="inputNombre" type="text" class="form-control" id="inputNombre" placeholder="Nombre" minlength="2"  aria-label="Nombre" required>
+         </div>
+         
+         <!--nombre-->
+         <div class="col-md-6">
+            <input name="inputApellido" type="text" class="form-control" id="inputApellido" placeholder="Apellido" minlength="2" aria-label="Apellido" required>
+         </div>
+         
+         <!-- Email -->
+         <div class="col-md-6">
+            <input name="inputEmail" type="email" class="form-control" id="inputEmail" placeholder="Email" aria-label="Email" required>
+         </div>
+         
+         <!-- Contraseña -->
+         <div class="col-md-6">
+            <input name="inputPassword" type="password" class="form-control" id="inputPassword" placeholder="Contraseña" aria-label="Contrasenia" required>
+         </div>
+         
+         <!--teléfono-->
+         <div class="col-md-6">
+            <input name="inputTelefono" type="text" class="form-control" id="inputTelefono" placeholder="Teléfono (Sin 0 ni 15)" aria-label="Teléfono" required>
+         </div>
+         
+         <!-- direccion -->
+         <div class="col-md-6">
+            <input name="inputDireccion" type="Dirección" class="form-control" id="inputDireccion" placeholder="Dirección" aria-label="Dirección" required>
+         </div>
+         
+         <!-- Fecha de nacimiento-->
+         <div class="col-md-6">
+            <label for="inputFNacim" class="form-label">Fecha de Nacimiento</label>
+            <input name="inputFNacim"  type="date" class="form-control" id="inputFNacim" required>
+         </div>
+         
+         <!--Provincia-->
+         <div class="col-md-6">
+            <label for="selectProvincia" class="form-label">Provincia</label>
+            <select name="selectProvincia" id="selectProvincia" class="form-select" required>
+               <option selected disabled value="">Seleccione Provincia</option>
+               <option value="Córdoba">Córdoba</option>
+               <option value="Buenos Aires">Buenos Aires</option>
+               <option value="Capital Federal">Capital Federal</option>
+               <option value="Catamarca">Catamarca</option>
+               <option value="Chaco">Chaco</option>
+               <option value="Chubut">Chubut</option>
+               <option value="Corrientes">Corrientes</option>
+               <option value="Entre Ríos">Entre Ríos</option>
+               <option value="Formosa">Formosa</option>
+               <option value="Jujuy">Jujuy</option>
+               <option value="La Pampa">La Pampa</option>
+               <option value="La Rioja">La Rioja</option>
+               <option value="Mendoza">Mendoza</option>
+               <option value="Misiones">Misiones</option>
+               <option value="Neuquén">Neuquén</option>
+               <option value="Río Negro">Río Negro</option>
+               <option value="Salta">Salta</option>
+               <option value="San Juan">San Juan</option>
+               <option value="San Luis">San Luis</option>
+               <option value="Santa Cruz">Santa Cruz</option>
+               <option value="Santa Fe">Santa Fe</option>
+               <option value="Santiago del Estero">Santiago del Estero</option>
+               <option value="Tierra del Fuego">Tierra del Fuego</option>
+               <option value="Tucumán">Tucumán</option>
+            </select>
+          
+         </div>
+    
+         <div class="col-md-12">
+            <label for="selectUsuario" class="form-label">Tipo de Usuario</label>
+            <select name="selectUsuario" id="selectUsuario" class="form-select" required>
+               <option selected disabled value="">Seleccione un tipo de usuario</option>
+               <option value="Produccion">Usuario de Producción</option>
+               <option value="Almacen">Usuario de Almacén</option>
+               <option value="Administrador">Administrador</option>
+            </select>
+           
+        </div>
+
+        <div class="col">
+            <button class="btn btn-success col-sm-12  botonEnviar" type="submit" id="btnBorrar" onclick="borrarRegistroUsuarios();">Borrar</button>
+        </div>
+
+        <div class="col">
+            <button class="btn btn-success col-sm-12 botonEnviar" type="submit" id="btnResumen" >Guardar</button>
+          </div>
+        </div>
+      
+      </form>
+    </div>
+  
+  
+      <!-- fin de Formulario  -->
+     
+  <br>
+  <br>
+  <br>
+
+          
+
+<!-- Comienzo del footer-->
+<footer class="bg-dark text-white pt-2 pb-0 container-fluid">
+  <div class="container">
+    <div class="row text-start text-md-left">
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5
+          class="
+            text-uppercase
+            mb-3
+            font-weight-bold
+            text-warning
+            titulo-pie
+          "
+        >
+          Beer Friends Stock System
+        </h5>
+        <p class="pie">
+          Nuestro Software maneja la gestión de tu cervecería: Clientes,
+          Insumos, Stock, Ventas y mucho más..
+        </p>
+      </div>
+
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text">
+        <h5
+          class="
+            text-uppercase
+            mb-3
+            font-weight-bold
+            text-warning
+            titulo-pie
+          "
+        >
+          Inicio
+        </h5>
+        <p class="mb-2 mt-2">
+          <a href="stockCerveza.html" class="text-white pie"> Cervezas</a>
+        </p>
+        <p class="mb-2">
+          <a href="Stockmateriaprima.html" class="text-white pie"> Materias Primas</a>
+        </p>
+        <p class="mb-2">
+          <a href="pedidosClientes.html" class="text-white pie"> Clientes</a>
+        </p>
+      </div>
+
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5
+          class="
+            text-uppercase
+            mb-3
+            font-weight-bold
+            text-warning
+            titulo-pie
+          "
+        >
+          Links
+        </h5>
+        <p class="mb-2">
+          <a href="login.html" class="text-white pie"> Cuenta</a>
+        </p>
+        <p class="mb-2">
+          <a href="registroUsuarios.html" class="text-white pie"> Registrarte</a>
+        </p>
+        <p class="mb-2">
+          <a href="index.html" class="text-white pie">Ayuda</a>
+        </p>
+      </div>
+
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5
+          class="
+            text-uppercase
+            mb-3
+            font-weight-bold
+            text-warning
+            titulo-pie
+          "
+        >
+          Contacto
+        </h5>
+        <p class="mb-3 pie">
+          <i class="fas fa-home mr-3 pie"></i> Alberdi, Cordoba, Argentina
+        </p>
+        <p class="mb-2 pie">
+          <i class="fas fa-envelope mr-3 pie"></i> bfstocksystem@gmail.com
+        </p>
+        <p></p>
+        <p class="mb-2 pie">
+          <i class="fas fa-phone mr-3 pie"></i> +543518073265
+        </p>
+      </div>
+    </div>
+
+    <hr class="mb-2 mt-0" />
+
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+        <p class="pie">
+          Copyright ©2021 All rights reserved by:
+          <a href="#" style="text-decoration: none">
+            <strong class="text-warning"> BEER FRIENDS STOCK SYSTEM</strong>
+          </a>
+        </p>
+      </div>
+
+      <div class="col-md-5 col-lg-4">
+        <div class="text-center text-md-right">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a
+                href="#"
+                class="btn-floating btn-sm text-white"
+                style="font-size: 20px"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                href="#"
+                class="btn-floating btn-sm text-white"
+                style="font-size: 20px"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                href="#"
+                class="btn-floating btn-sm text-white"
+                style="font-size: 20px"
+                ><i class="fab fa-google-plus"></i
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                href="#"
+                class="btn-floating btn-sm text-white"
+                style="font-size: 20px"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                href="#"
+                class="btn-floating btn-sm text-white"
+                style="font-size: 20px"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- fin del footer-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  </body>
+</html>

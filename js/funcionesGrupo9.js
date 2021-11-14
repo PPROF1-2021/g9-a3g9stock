@@ -110,7 +110,7 @@ function borrarRegistroUsuarios() {
 }
 
 function redireccion() {
-  var tiempo = 4000;
+  var tiempo = 5000;
 
   //mensaje
   document.getElementById('mensaje').innerHTML =

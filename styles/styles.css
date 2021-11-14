@@ -103,3 +103,35 @@
   border-left-color:  rgb (252,214,0) !important;
 }
 
+.dimension {
+  width: 500px;
+  height: 300px;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #ffc600;
+  color: #fff;
+  border: 3px solid #ffc600;
+}
+
+.nav-tabs .nav-link {
+  background-color: #fff;
+  color: #ffc600;
+  border: 3px solid #ffc600;
+  margin-right: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.nav-tabs .nav-link:hover {
+  border: 3px solid #ffc600;
+}
+
+.nav-tabs {
+  border-bottom: 3px solid #ffc600;
+}
+
+.tab-content {
+  border: 3px solid #ffc600;
+  padding: 20px;
+}

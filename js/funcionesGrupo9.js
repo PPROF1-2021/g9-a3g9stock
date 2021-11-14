@@ -96,7 +96,7 @@ function calcularEdad(fechaNac) {
   return edad;
 }
 
-//funcion que limpia los campos del formulario
+//funcion que limpia los campos del formulario, 2do evento de interaccion del usuario con el dom
 function borrarRegistroUsuarios() {
   document.getElementById('inputNombre').value = '';
   document.getElementById('inputApellido').value = '';

@@ -67,6 +67,12 @@ function validarNuevoPedido() {
   nombre = document.getElementById('inputBusquedaCliente').value;
   tipoCerveza = document.getElementById('inputTipoCerveza').selectedIndex;
   cantidad = document.getElementById('inputCantidad').value;
+
+  //valida que el campo cantidad sea numérico
+  if (isNaN(cantidad)) {
+    alert('El campo cantidad debe contener un valor numérico');
+    return false;
+  }
 }
 
 /*

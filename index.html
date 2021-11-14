@@ -195,19 +195,19 @@
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-          <h1 class="h3 mb-0 text-white">Panel de Control</h1>
+          <h1 class="h3 mb-0 text-white">Dashboard</h1>
           <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-warning shadow-sm"><i
               class="fas fa-download fa-sm text-dark-50"> </i> Reporte Generado</a>
         </div>
         <!-- Content Row -->
         <div class="row">
           <!-- ganancias Card Example -->
-          <div class="col-xl-3 col-md-6 mb-4">
+          <div class="col-xl-3 col-md-6 mb-4" onmouseover="this.title='Ganancias obtenidas desde el dia 1ro del mes en curso'">
             <div class="bg-light border-start border-warning border-5  Default shadow  h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-warning fw-bold text-uppercase mb-2" onmouseover="this.title='Ganancias obtenidas desde el dia 1ro del mes en curso'">
+                    <div class="text-xs font-weight-bold text-warning fw-bold text-uppercase mb-2" >
                       Ganancias (Mensuales)</div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
                   </div>
@@ -219,12 +219,12 @@
             </div>
           </div>
           <!-- Stock materias primas Card Example -->
-          <div class="col-xl-3 col-md-6 mb-4">
+          <div class="col-xl-3 col-md-6 mb-4" onmouseover="this.title='Porcentaje de materias primas que quedan aún en stock'">
             <div class="bg-light border-start border-info border-5  Default shadow  h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-info fw-bold text-uppercase mb-1"  onmouseover="this.title='Porcentaje de materias primas que quedan aún en stock'">Stock Mat.Primas
+                    <div class="text-xs font-weight-bold text-info fw-bold text-uppercase mb-1" >Stock Mat.Primas
                     </div>
                     <div class="row no-gutters align-items-center">
                       <div class="col-auto">
@@ -247,12 +247,12 @@
           </div>
 
           <!-- TAREAS Card Example -->
-          <div class="col-xl-3 col-md-6 mb-4">
+          <div class="col-xl-3 col-md-6 mb-4" onmouseover="this.title='Tareas pendientes del día'">
             <div class="bg-light border-start border-danger border-5  Default shadow  h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-danger fw-bold text-uppercase mb-1" onmouseover="this.title='Tareas pendientes del día'">Tareas
+                    <div class="text-xs font-weight-bold text-danger fw-bold text-uppercase mb-1" >Tareas
                     </div>
                     <div class="row no-gutters align-items-center">
                       <div class="col-auto">
@@ -275,14 +275,14 @@
           </div>
 
           <!-- pedidos Card Example -->
-          <div class="col-xl-3 col-md-6 mb-4">
+          <div class="col-xl-3 col-md-6 mb-4" onmouseover="this.title='Pedidos pendientes de armar'">
             <div class="bg-light border-start border-success border-5  Default shadow  h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
                     <div class="text-xs font-weight-bold text-success fw-bold text-uppercase mb-1">
                       Pedidos</div>
-                    <div class="h5 mb-0 font-weight-bold text-gray-800" onmouseover="this.title='Pedidos pendientes de armar'">18</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800" >18</div>
                   </div>
                   <div class="col-auto">
                     <i class="fas fa-dolly text-success fa-2x"></i>
@@ -295,10 +295,10 @@
         <!--BALANCE-INFO-ESTADISTICAS-->
         <div class="container-fluid">
         <div class="row">
-          <div class="col-6 col-sm-3 ">
+          <div class="col-6 col-sm-3 " onmouseover="this.title='Permite ver el balance de la empresa'">
               <div class="bg-light border-end border-warning border-5  Default shadow  h-100 py-2">
                 <div class="card-body">
-                  <div class="text-xs font-weight-bold text-warning fw-bold text-uppercase mb-1" onmouseover="this.title='Permite ver el balance de la empresa'">Balance
+                  <div class="text-xs font-weight-bold text-warning fw-bold text-uppercase mb-1" >Balance
                   </div>
                   <img class="img-fluid rounded mx-auto d-block" style="width: 5rem;" src="assets/scale.png" alt="...">
                   <br>
@@ -311,10 +311,10 @@
           </div>
 
 
-            <div class="col-6 col-sm-6">
+            <div class="col-6 col-sm-6"  onmouseover="this.title='Pedidos recibidos y entregados en el año. Stock de barriles y envases en uso'">
               <div class="bg-light border-end border-info border-5  Default shadow  h-100 py-2">
                 <div class="card-body">
-                  <div class="text-xs font-weight-bold text-info fw-bold text-uppercase mb-1" onmouseover="this.title='Pedidos recibidos y entregados en el año. Stock de barriles y envases en uso'"> Información
+                  <div class="text-xs font-weight-bold text-info fw-bold text-uppercase mb-1"> Información
                   </div>
                   <div class="progress-card">
                     <div class="d-flex justify-content-between mb-1">
@@ -363,12 +363,14 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-sm-3">
+
+            <!-- Evolución de ventas-->
+            <div class="col-6 col-sm-3"  onmouseover="this.title='Informe de las ventas por períodos de tiempo a seleccionar'">
               <div class="bg-light border-end border-danger border-5  Default shadow  h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-danger fw-bold text-uppercase mb-1" onmouseover="this.title='Informe de las ventas por períodos de tiempo a seleccionar'"> Evolución de ventas
+                      <div class="text-xs font-weight-bold text-danger fw-bold text-uppercase mb-1"> Evolución de ventas
                       </div>
 
                     </div>
@@ -393,12 +395,12 @@
         <br>
 <!--tablas contenido -->
       <div class="row">
-         <div class="col-xl-6 col-md-6 mb-4">
+         <div class="col-xl-6 col-md-6 mb-4" onmouseover="this.title='Información de ventas desde el día 1ro del mes en curso, expresado en litros y variedad de mayor salida'">
             <div class="bg-light border-top border-warning border-5  Default shadow  h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-warning fw-bold text-uppercase mb-1" onmouseover="this.title='Información de ventas desde el día 1ro del mes en curso, expresado en litros y variedad de mayor salida'"> Tabla de Vendedores
+                    <div class="text-xs font-weight-bold text-warning fw-bold text-uppercase mb-1" > Tabla de Vendedores
                     </div>
                     <div class="card-body">
                       <table class="table table-head-bg-success table-striped table-hover">
@@ -451,12 +453,12 @@
             </div>
           </div>
         
-      <div class="col-xl-6 col-md-6 mb-4"> 
+      <div class="col-xl-6 col-md-6 mb-4" onmouseover="this.title='Tareas pendientes del día'">  
             <div class="bg-light border-top border-info border-5  Default shadow  h-100 py-2">
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div class="text-xs font-weight-bold text-info fw-bold text-uppercase mb-1" onmouseover="this.title='Tareas pendientes del día'"> Pendientes
+                    <div class="text-xs font-weight-bold text-info fw-bold text-uppercase mb-1"> Pendientes
                     </div>
                   </div>
                   

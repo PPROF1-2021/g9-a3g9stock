@@ -71,11 +71,11 @@ public class SvLogin extends HttpServlet {
             HttpSession misesion = request.getSession(true);
             misesion.setAttribute("usuario", usuario);
             misesion.setAttribute("contrasenia", contrasenia);
-            System.out.println("llega aca pero le chupa un egg");
+            
             response.sendRedirect("index.jsp");
         }
         else{
-            System.out.println("pasa por aca");
+            
             response.sendRedirect("login.jsp");
         }
     }

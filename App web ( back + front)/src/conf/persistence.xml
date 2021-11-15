@@ -3,6 +3,7 @@
   <persistence-unit name="BfssPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>Logica.Persona</class>
+    <class>Logica.TipoDeUsuario</class>
     <class>Logica.Usuario</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>

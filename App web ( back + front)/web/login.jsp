@@ -33,7 +33,7 @@
         <div class="login-data">
           <img src="assets/beer2.png" alt="" />
           <h1>Inicio de Sesión</h1>
-          <form action="#" class="login-form">
+          <form name="formlogin" action="SvLogin" method="POST" class="login-form">
             <div class="input-group">
               <label class="input-fill">
                 <input type="email" name="email" id="email" required />

@@ -37,6 +37,15 @@
   </head>
 
   <body>
+       <%
+            HttpSession misesion = request.getSession();
+            String usuario = (String) misesion.getAttribute("usuario");
+
+            if (usuario == null) {
+                response.sendRedirect("login.jsp");
+            } else {
+
+        %>
     <!-- Menú -->
     <div class="d-flex" id="wrapper">
       <div class="bg-black" id="sidebar-wrapper">
@@ -694,5 +703,7 @@
         el.classList.toggle('toggled');
       };
     </script>
+    <%         }
+        %>  
   </body>
 </html>

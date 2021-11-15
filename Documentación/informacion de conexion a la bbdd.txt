@@ -1,0 +1,5 @@
+datos de conexion a la base de datos:
+Nombre de Usuario: bfss
+Contraseña: 123456
+
+serverTimeZone=UTC

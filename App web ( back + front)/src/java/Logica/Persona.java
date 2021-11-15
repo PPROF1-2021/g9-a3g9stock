@@ -14,6 +14,7 @@ import javax.persistence.InheritanceType;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Persona implements Serializable {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idPersona;

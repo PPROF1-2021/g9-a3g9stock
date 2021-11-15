@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
 public class Usuario extends Persona{
     
     @Basic
-    private String contraseña;
+    private String contrasenia;
     private String cargo;
    
     @Temporal(TemporalType.DATE)
@@ -29,27 +29,27 @@ public class Usuario extends Persona{
     public Usuario() {
     }
 
-    public Usuario(String contraseña, String cargo, Date fechaNacimiento, TipoDeUsuario tipoUsuario) {
-        this.contraseña = contraseña;
+    public Usuario(String contrasenia, String cargo, Date fechaNacimiento, TipoDeUsuario tipoUsuario) {
+        this.contrasenia = contrasenia;
         this.cargo = cargo;
         this.fechaNacimiento = fechaNacimiento;
         this.tipoUsuario = tipoUsuario;
     }
 
-    public Usuario(String contraseña, String cargo, Date fechaNacimiento, TipoDeUsuario tipoUsuario, int idPersona, String nombre, String apellido, String telefono, String email, String direccion, String provincia) {
+    public Usuario(String contrasenia, String cargo, Date fechaNacimiento, TipoDeUsuario tipoUsuario, int idPersona, String nombre, String apellido, String telefono, String email, String direccion, String provincia) {
         super(idPersona, nombre, apellido, telefono, email, direccion, provincia);
-        this.contraseña = contraseña;
+        this.contrasenia = contrasenia;
         this.cargo = cargo;
         this.fechaNacimiento = fechaNacimiento;
         this.tipoUsuario = tipoUsuario;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasenia() {
+        return contrasenia;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
     }
 
     public String getCargo() {
@@ -75,6 +75,6 @@ public class Usuario extends Persona{
     public void setTipoUsuario(TipoDeUsuario tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
-  
-    
+
+   
 }

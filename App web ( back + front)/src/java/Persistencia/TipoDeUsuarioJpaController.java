@@ -5,7 +5,7 @@
  */
 package Persistencia;
 
-import Logica.Persona;
+import Logica.TipoDeUsuario;
 import Persistencia.exceptions.NonexistentEntityException;
 import java.io.Serializable;
 import java.util.List;
@@ -21,9 +21,9 @@ import javax.persistence.criteria.Root;
  *
  * @author Caro
  */
-public class PersonaJpaController implements Serializable {
+public class TipoDeUsuarioJpaController implements Serializable {
 
-    public PersonaJpaController(EntityManagerFactory emf) {
+    public TipoDeUsuarioJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
     private EntityManagerFactory emf = null;
@@ -32,16 +32,15 @@ public class PersonaJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public PersonaJpaController() {
+     public TipoDeUsuarioJpaController() {
         emf = Persistence.createEntityManagerFactory("BfssPU");
     }
-    
-    public void create(Persona persona) {
+    public void create(TipoDeUsuario tipoDeUsuario) {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            em.persist(persona);
+            em.persist(tipoDeUsuario);
             em.getTransaction().commit();
         } finally {
             if (em != null) {
@@ -50,19 +49,19 @@ public class PersonaJpaController implements Serializable {
         }
     }
 
-    public void edit(Persona persona) throws NonexistentEntityException, Exception {
+    public void edit(TipoDeUsuario tipoDeUsuario) throws NonexistentEntityException, Exception {
         EntityManager em = null;
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            persona = em.merge(persona);
+            tipoDeUsuario = em.merge(tipoDeUsuario);
             em.getTransaction().commit();
         } catch (Exception ex) {
             String msg = ex.getLocalizedMessage();
             if (msg == null || msg.length() == 0) {
-                int id = persona.getIdPersona();
-                if (findPersona(id) == null) {
-                    throw new NonexistentEntityException("The persona with id " + id + " no longer exists.");
+                int id = tipoDeUsuario.getIdTipoUsuario();
+                if (findTipoDeUsuario(id) == null) {
+                    throw new NonexistentEntityException("The tipoDeUsuario with id " + id + " no longer exists.");
                 }
             }
             throw ex;
@@ -78,14 +77,14 @@ public class PersonaJpaController implements Serializable {
         try {
             em = getEntityManager();
             em.getTransaction().begin();
-            Persona persona;
+            TipoDeUsuario tipoDeUsuario;
             try {
-                persona = em.getReference(Persona.class, id);
-                persona.getIdPersona();
+                tipoDeUsuario = em.getReference(TipoDeUsuario.class, id);
+                tipoDeUsuario.getIdTipoUsuario();
             } catch (EntityNotFoundException enfe) {
-                throw new NonexistentEntityException("The persona with id " + id + " no longer exists.", enfe);
+                throw new NonexistentEntityException("The tipoDeUsuario with id " + id + " no longer exists.", enfe);
             }
-            em.remove(persona);
+            em.remove(tipoDeUsuario);
             em.getTransaction().commit();
         } finally {
             if (em != null) {
@@ -94,19 +93,19 @@ public class PersonaJpaController implements Serializable {
         }
     }
 
-    public List<Persona> findPersonaEntities() {
-        return findPersonaEntities(true, -1, -1);
+    public List<TipoDeUsuario> findTipoDeUsuarioEntities() {
+        return findTipoDeUsuarioEntities(true, -1, -1);
     }
 
-    public List<Persona> findPersonaEntities(int maxResults, int firstResult) {
-        return findPersonaEntities(false, maxResults, firstResult);
+    public List<TipoDeUsuario> findTipoDeUsuarioEntities(int maxResults, int firstResult) {
+        return findTipoDeUsuarioEntities(false, maxResults, firstResult);
     }
 
-    private List<Persona> findPersonaEntities(boolean all, int maxResults, int firstResult) {
+    private List<TipoDeUsuario> findTipoDeUsuarioEntities(boolean all, int maxResults, int firstResult) {
         EntityManager em = getEntityManager();
         try {
             CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
-            cq.select(cq.from(Persona.class));
+            cq.select(cq.from(TipoDeUsuario.class));
             Query q = em.createQuery(cq);
             if (!all) {
                 q.setMaxResults(maxResults);
@@ -118,20 +117,20 @@ public class PersonaJpaController implements Serializable {
         }
     }
 
-    public Persona findPersona(int id) {
+    public TipoDeUsuario findTipoDeUsuario(int id) {
         EntityManager em = getEntityManager();
         try {
-            return em.find(Persona.class, id);
+            return em.find(TipoDeUsuario.class, id);
         } finally {
             em.close();
         }
     }
 
-    public int getPersonaCount() {
+    public int getTipoDeUsuarioCount() {
         EntityManager em = getEntityManager();
         try {
             CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
-            Root<Persona> rt = cq.from(Persona.class);
+            Root<TipoDeUsuario> rt = cq.from(TipoDeUsuario.class);
             cq.select(em.getCriteriaBuilder().count(rt));
             Query q = em.createQuery(cq);
             return ((Long) q.getSingleResult()).intValue();

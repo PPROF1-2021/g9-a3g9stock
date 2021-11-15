@@ -62,6 +62,7 @@ function borrarCamposPedido() {
 }
 
 function validarNuevoPedido() {
+  //
   var nombre, tipoCerveza, cantidad;
 
   nombre = document.getElementById('inputBusquedaCliente').value;
@@ -75,35 +76,30 @@ function validarNuevoPedido() {
   }
 }
 
-/*
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.sidebar .nav-link').forEach(function (element) {
-    element.addEventListener('click', function (e) {
-      let nextEl = element.nextElementSibling;
-      let parentEl = element.parentElement;
+function validarAltaStockMP() {
+  var nombreMatPrima,
+    marcaMatPrima,
+    marca,
+    tipoInsumo,
+    unidadMedida,
+    cantidadXEmpaque,
+    proveedor;
 
-      if (nextEl) {
-        e.preventDefault();
-        let mycollapse = new bootstrap.Collapse(nextEl);
+  //faltan traer valores del form
 
-        if (nextEl.classList.contains('show')) {
-          mycollapse.hide();
-        } else {
-          mycollapse.show();
-          // find other submenus with class=show
-          var opened_submenu =
-            parentEl.parentElement.querySelector('.submenu.show');
-          // if it exists, then close all of them
-          if (opened_submenu) {
-            new bootstrap.Collapse(opened_submenu);
-          }
-        }
-      }
-    }); // addEventListener
-  }); // forEach
-});
-// DOMContentLoaded  end*/
-/*
+  if (
+    nombreMatPrima === '' ||
+    marcaMatPrima === '' ||
+    marca === '' ||
+    tipoInsumo === '' ||
+    unidadMedida === '' ||
+    cantidadXEmpaque === '' ||
+    proveedor === ''
+  ) {
+  }
+}
+
+/********** funciones pasadas al archivo funcionesGrupo99.js **********
 function borrarRegistroUsuarios() {
   document.getElementById('inputNombre').value = '';
   document.getElementById('inputApellido').value = '';

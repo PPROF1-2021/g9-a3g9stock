@@ -1,0 +1,8 @@
+datos de conexion a la base de datos:
+Nombre de Usuario: bfss
+Contraseña: 123456
+
+Librerias utilizadas:
+EclipseLink (JPA 2.1)
+javax.persistence 2.2.1
+mysql-conector-java-8.0.11

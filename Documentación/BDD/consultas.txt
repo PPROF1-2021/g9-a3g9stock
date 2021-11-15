@@ -1,0 +1,16 @@
+SELECT * FROM `cliente` WHERE apellido = "Tecera";
+
+
+SELECT precioUnitario FROM cerveza where nombreCerveza = "J Dorada"
+
+
+
+Select * FROM materiaprima MP JOIN materiaprimaxproveedor MxP WHERE (MxP.idMateriaPrima = MP.idMateriaPrima) AND MxP.cantidadStock < 5
+
+
+SELECT *
+FROM usuario
+Where (nombreUsuario = 'MercedesGranda' AND contrasenia = '123456')
+
+
+SELECT nombre, apellido, telefono, nombreCerveza, cantidad FROM pedido P JOIN detalledepedido DP JOIN cliente Cl JOIN cerveza CE WHERE (P.idPedido = DP.idPedido) AND (P.idCliente = Cl.idCliente) AND (DP.idCerveza = CE.idCerveza) AND P.estadoPedido = 0

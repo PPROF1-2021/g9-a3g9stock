@@ -1,6 +1,6 @@
 
 package Logica;
 
-public class Proveedor {
+public class Proveedor extends Persona{
     
 }

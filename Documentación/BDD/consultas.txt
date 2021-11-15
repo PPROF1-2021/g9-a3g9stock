@@ -13,4 +13,6 @@ FROM usuario
 Where (nombreUsuario = 'MercedesGranda' AND contrasenia = '123456')
 
 
-SELECT nombre, apellido, telefono, nombreCerveza, cantidad FROM pedido P JOIN detalledepedido DP JOIN cliente Cl JOIN cerveza CE WHERE (P.idPedido = DP.idPedido) AND (P.idCliente = Cl.idCliente) AND (DP.idCerveza = CE.idCerveza) AND P.estadoPedido = 0
+SELECT nombre, apellido, telefono, nombreCerveza, cantidad 
+FROM pedido P JOIN detalledepedido DP JOIN cliente Cl JOIN cerveza CE
+WHERE (P.idPedido = DP.idPedido) AND (P.idCliente = Cl.idCliente) AND (DP.idCerveza = CE.idCerveza) AND P.estadoPedido = 0

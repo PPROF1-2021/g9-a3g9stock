@@ -4,7 +4,7 @@
     Author     : Caro
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -60,9 +60,9 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <!-- Contrase√±a -->
+                                        <!-- ContraseÒa -->
                                         <div class="col-md-6">
-                                            <label for="inputPassword" class="form-label">Contrase√±a: </label>
+                                            <label for="inputPassword" class="form-label">ContraseÒa: </label>
                                             <input name="inputPassword" type="password" class="form-control" id="inputPassword" aria-label="Contrasenia">
                                         </div>
                                     </td>
@@ -71,17 +71,17 @@
                                 <tr>
 
                                     <td>
-                                        <!--tel√©fono-->
+                                        <!--telÈfono-->
                                         <div class="col-md-6">
-                                            <label for="inputTelefono" class="form-label">Tel√©fono: </label>
-                                            <input name="inputTelefono" type="text" class="form-control" id="inputTelefono" placeholder="(Sin 0 ni 15)" aria-label="Tel√©fono">
+                                            <label for="inputTelefono" class="form-label">TelÈfono: </label>
+                                            <input name="inputTelefono" type="text" class="form-control" id="inputTelefono" placeholder="(Sin 0 ni 15)" aria-label="TelÈfono">
                                         </div>
                                     </td>
                                     <td>
                                         <!-- direccion -->
                                         <div class="col-md-6">
-                                            <label for="inputDireccion" class="form-label">Direcci√≥n: </label>
-                                            <input name="inputDireccion" type="Direcci√≥n" class="form-control" id="inputDireccion" aria-label="Direcci√≥n">
+                                            <label for="inputDireccion" class="form-label">DirecciÛn: </label>
+                                            <input name="inputDireccion" type="DirecciÛn" class="form-control" id="inputDireccion" aria-label="DirecciÛn">
                                         </div>
                                     </td>
                                 </tr>
@@ -102,22 +102,22 @@
                                             <label for="selectProvincia" class="form-label">Provincia</label>
                                             <select name="selectProvincia" id="selectProvincia" class="form-select">
                                                 <option selected disabled value="">Seleccione Provincia</option>
-                                                <option value="C√≥rdoba">C√≥rdoba</option>
+                                                <option value="CÛrdoba">CÛrdoba</option>
                                                 <option value="Buenos Aires">Buenos Aires</option>
                                                 <option value="Capital Federal">Capital Federal</option>
                                                 <option value="Catamarca">Catamarca</option>
                                                 <option value="Chaco">Chaco</option>
                                                 <option value="Chubut">Chubut</option>
                                                 <option value="Corrientes">Corrientes</option>
-                                                <option value="Entre R√≠os">Entre R√≠os</option>
+                                                <option value="Entre RÌos">Entre RÌos</option>
                                                 <option value="Formosa">Formosa</option>
                                                 <option value="Jujuy">Jujuy</option>
                                                 <option value="La Pampa">La Pampa</option>
                                                 <option value="La Rioja">La Rioja</option>
                                                 <option value="Mendoza">Mendoza</option>
                                                 <option value="Misiones">Misiones</option>
-                                                <option value="Neuqu√©n">Neuqu√©n</option>
-                                                <option value="R√≠o Negro">R√≠o Negro</option>
+                                                <option value="NeuquÈn">NeuquÈn</option>
+                                                <option value="RÌo Negro">RÌo Negro</option>
                                                 <option value="Salta">Salta</option>
                                                 <option value="San Juan">San Juan</option>
                                                 <option value="San Luis">San Luis</option>
@@ -125,7 +125,7 @@
                                                 <option value="Santa Fe">Santa Fe</option>
                                                 <option value="Santiago del Estero">Santiago del Estero</option>
                                                 <option value="Tierra del Fuego">Tierra del Fuego</option>
-                                                <option value="Tucum√°n">Tucum√°n</option>
+                                                <option value="Tucum·n">Tucum·n</option>
                                             </select>
 
                                         </div>
@@ -138,9 +138,8 @@
                                             <label for="selectUsuario" class="form-label">Tipo de Usuario</label>
                                             <select name="selectUsuario" id="selectUsuario" class="form-select">
                                                 <option selected disabled value="">Seleccione tipo...</option>
-                                                <option value="Produccion">Usuario de Producci√≥n</option>
-                                                <option value="Almacen">Usuario de Almac√©n</option>
-                                                <option value="Administrador">Administrador</option>
+                                                <option value="Produccion">Usuario de ProducciÛn</option>
+                                                <option value="Almacen">Usuario de AlmacÈn</option>
                                             </select>
                                         </div>
                                     </td>

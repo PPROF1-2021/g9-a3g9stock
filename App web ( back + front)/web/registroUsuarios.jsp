@@ -30,7 +30,7 @@
 
                     <!-- Formulario  -->
                     <div class="container-fluid col-12 border border-warning gx-5 p-5 border border-3 container-grey">
-                        <form action="" method="Post" class="row g-3 was-validated text-md-left text-white" id="registroDeUsuario" onsubmit="return validarRegUsuario()">
+                        <form action="SvRegistroUsuario" method="Post" class="row g-3 was-validated text-md-left text-white" id="registroDeUsuario" onsubmit="return validarRegUsuario()">
                             <p class="h1" id="pRegistroUsuario">Registro de Usuario</p> 
                             <table class="table text-center">
                                 <tr>

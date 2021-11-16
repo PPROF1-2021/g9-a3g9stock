@@ -8,15 +8,11 @@ import javax.crypto.spec.SecretKeySpec;
 import javax.swing.JOptionPane;
 import org.apache.commons.codec.binary.Base64;
 
-/**
- *
- * @author Somos Programadores
- * Facebook https://web.facebook.com/developers08062019
- */
+
 public class Encoder {
-         String secretKey = "SomosProgramadores";
+         String secretKey = "BeerFriendsACAJM";
     
-        public String encode(String cadena) {
+        public String encriptar(String cadena) {
         String encriptacion = "";
         try {
             MessageDigest md5 = MessageDigest.getInstance("MD5");
@@ -30,12 +26,12 @@ public class Encoder {
             byte[] base64Bytes = Base64.encodeBase64(buf);
             encriptacion = new String(base64Bytes);
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "AError al encriptar");
+            JOptionPane.showMessageDialog(null, "Error al encriptar");
         }
         return encriptacion;
     }
 
-    public String deecode(String cadenaEncriptada) {
+    public String desencriptar(String cadenaEncriptada) {
         String desencriptacion = "";
         try {
             byte[] message = Base64.decodeBase64(cadenaEncriptada.getBytes("utf-8"));
@@ -49,7 +45,7 @@ public class Encoder {
             desencriptacion = new String(plainText, "UTF-8");
 
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "error al desencriptar");
+            JOptionPane.showMessageDialog(null, "Error al desencriptar");
         }
         return desencriptacion;
     }

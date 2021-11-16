@@ -32,7 +32,7 @@ public class TipoDeUsuarioJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-     public TipoDeUsuarioJpaController() {
+      public TipoDeUsuarioJpaController() {
         emf = Persistence.createEntityManagerFactory("BfssPU");
     }
     public void create(TipoDeUsuario tipoDeUsuario) {

@@ -1,0 +1,11 @@
+string nombre
+string apellido
+string telefono
+string email
+string direccion
+string provincia
+
+string contraseña
+string cargo
+date fechaNac
+tipodeUsuario tipousuario

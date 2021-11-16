@@ -15,13 +15,19 @@ public class Controladora {
      //recibe los parametros del servlet, los procesa y lo pasa a la persistencia para guardarlos
     public void crearUsuario(String inputNombre, String inputApellido, String inputEmail, String inputPassword, String inputTelefono, String inputDireccion, String inputFNacim, String selectProvincia, String selectUsuario) {
         Usuario usuario = new Usuario();
-    
-        //falta encriptar la contraseña y convertir la fecha de string a date
+        Date fechaN;
+        
+
+        //convierto la fecha de string a date
+        fechaN = parseFecha(inputFNacim);
+        
+        //falta encriptar la contraseña
         
         //asigno los valores al usuario para pasarlos a la persistencia
         usuario.setNombre(inputNombre);
         usuario.setApellido(inputApellido);
         usuario.setEmail(inputEmail);
+        usuario.setFechaNacimiento(fechaN);
         
     
     }

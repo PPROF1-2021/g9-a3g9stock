@@ -64,15 +64,16 @@ El usuario administrador podrá agregar usuarios nuevos en el sistema, modificar
 
 ## Construido con 🛠️
 
-* ![image](https://user-images.githubusercontent.com/89421482/142065904-1adaff0f-bc72-4f6d-a76a-8365f07a3b1d.png)
-* ![image](https://user-images.githubusercontent.com/89421482/142066060-c113f60f-d2bb-4110-9cf0-4d36cece70a4.png)
-* ![image](https://user-images.githubusercontent.com/89421482/142066522-1e7e49ab-a81c-44de-9cf9-d0c1a440d060.png)
-* ![image](https://user-images.githubusercontent.com/89421482/142066562-80f37e21-7ae8-4540-996f-4ca0cc3af72c.png)
-* ![image](https://user-images.githubusercontent.com/89421482/142066595-bd5b5a6d-1ace-487a-adbf-9a7e7fff1317.png)
-* ![image](https://user-images.githubusercontent.com/89421482/142066621-e71453c7-e2cf-4a52-82cb-dd6f70b750c7.png)
-* ![image](https://user-images.githubusercontent.com/89421482/142066734-f5a5b773-bbc1-457f-966e-9d9505561546.png)
-* ![image](https://user-images.githubusercontent.com/89421482/142067117-a36bf943-c530-41cb-b5bc-5af07c6e1db1.png)
-
+* ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+* ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3)
+* ![Javascript](https://img.shields.io/badge/-JavaScript-EDD222?style=flat&logo=javascript&logoColor=white)
+* ![Java](https://img.shields.io/badge/-Java-6EBF20?style=flat&logo=java&logoColor=white)
+* ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=flat&logo=bootstrap&logoColor=white)
+* ![Xampp](http://img.shields.io/badge/-Xampp-FF9A00?style=flat&logo=xampp&logoColor=white)
+* ![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)
+* ![GitHub](https://img.shields.io/badge/-Github-181717?style=flat&logo=github&logoColor=white)
+* ![NetBeans](https://img.shields.io/badge/NetBeansIDE-1B6AC6.svg?style=flat&logo=apache-netbeans-ide&logoColor=white")
+* ![VSCode](https://img.shields.io/badge/-VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
 
 
 ## Wiki 📖

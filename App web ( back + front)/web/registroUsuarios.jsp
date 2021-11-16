@@ -12,19 +12,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;500;700;800&display=swap"
-            rel="stylesheet"
-            />
-
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-            integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
-            crossorigin="anonymous"
-            />
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;500;700;800&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous"/>
         <link rel="stylesheet" href="styles/main.css" />
         <link rel="stylesheet" href="styles/normalize.css" />
+        <link rel="stylesheet" href="styles/styles.css" />
+        <script src="js/scripts.js"></script>
         <title>Login</title>
     </head>
     <body>
@@ -33,22 +26,19 @@
             <div class="login">
                 <div class="login-data">
                     <img src="assets/beer2.png" alt="" />
+
+
                     <!-- Formulario  -->
-
                     <div class="container-fluid col-12 border border-warning gx-5 p-5 border border-3 container-grey">
-                        <form  action="confirmacion.php" method="Post" class="row g-3 was-validated text-md-left text-white" id="registroDeUsuario"  onsubmit="return validarRegUsuario()">
+                        <form action="" method="Post" class="row g-3 was-validated text-md-left text-white" id="registroDeUsuario" onsubmit="return validarRegUsuario()">
                             <p class="h1" id="pRegistroUsuario">Registro de Usuario</p> 
-
-
-
-
                             <table class="table text-center">
                                 <tr>
                                     <td> 
                                         <!--nombre-->
                                         <div class="col-md-6">
                                             <label for="inputNombre" class="form-label">Nombre: </label>
-                                            <input name="inputNombre" type="text" class="form-control" id="inputNombre" minlength="2"  aria-label="Nombre" required>
+                                            <input name="inputNombre" type="text" class="form-control" id="inputNombre" minlength="2"  aria-label="Nombre">
                                         </div>
                                     </td>
 
@@ -56,7 +46,7 @@
                                         <!--Apellido-->
                                         <div class="col-md-6">
                                             <label for="inputApellido" class="form-label">Apellido: </label>
-                                            <input name="inputApellido" type="text" class="form-control" id="inputApellido" minlength="2" aria-label="Apellido" required>
+                                            <input name="inputApellido" type="text" class="form-control" id="inputApellido" minlength="2" aria-label="Apellido">
                                         </div>
                                     </td>  
                                 </tr>
@@ -66,14 +56,14 @@
                                         <!-- Email -->
                                         <div class="col-md-6">
                                             <label for="inputEmail" class="form-label">Email: </label>
-                                            <input name="inputEmail" type="email" class="form-control" id="inputEmail"  aria-label="Email" required>
+                                            <input name="inputEmail" type="email" class="form-control" id="inputEmail"  aria-label="Email">
                                         </div>
                                     </td>
                                     <td>
                                         <!-- Contraseña -->
                                         <div class="col-md-6">
                                             <label for="inputPassword" class="form-label">Contraseña: </label>
-                                            <input name="inputPassword" type="password" class="form-control" id="inputPassword" aria-label="Contrasenia" required>
+                                            <input name="inputPassword" type="password" class="form-control" id="inputPassword" aria-label="Contrasenia">
                                         </div>
                                     </td>
                                 </tr>
@@ -84,14 +74,14 @@
                                         <!--teléfono-->
                                         <div class="col-md-6">
                                             <label for="inputTelefono" class="form-label">Teléfono: </label>
-                                            <input name="inputTelefono" type="text" class="form-control" id="inputTelefono" placeholder="(Sin 0 ni 15)" aria-label="Teléfono" required>
+                                            <input name="inputTelefono" type="text" class="form-control" id="inputTelefono" placeholder="(Sin 0 ni 15)" aria-label="Teléfono">
                                         </div>
                                     </td>
                                     <td>
                                         <!-- direccion -->
                                         <div class="col-md-6">
                                             <label for="inputDireccion" class="form-label">Dirección: </label>
-                                            <input name="inputDireccion" type="Dirección" class="form-control" id="inputDireccion" aria-label="Dirección" required>
+                                            <input name="inputDireccion" type="Dirección" class="form-control" id="inputDireccion" aria-label="Dirección">
                                         </div>
                                     </td>
                                 </tr>
@@ -102,7 +92,7 @@
                                         <!-- Fecha de nacimiento-->
                                         <div class="col-md-6">
                                             <label for="inputFNacim" class="form-label">Fecha de Nacimiento</label>
-                                            <input name="inputFNacim"  type="date" class="form-control" id="inputFNacim" required>
+                                            <input name="inputFNacim"  type="date" class="form-control" id="inputFNacim">
                                         </div>
 
                                     </td>
@@ -110,7 +100,7 @@
                                         <!--Provincia-->
                                         <div class="col-md-6">
                                             <label for="selectProvincia" class="form-label">Provincia</label>
-                                            <select name="selectProvincia" id="selectProvincia" class="form-select" required>
+                                            <select name="selectProvincia" id="selectProvincia" class="form-select">
                                                 <option selected disabled value="">Seleccione Provincia</option>
                                                 <option value="Córdoba">Córdoba</option>
                                                 <option value="Buenos Aires">Buenos Aires</option>
@@ -141,67 +131,37 @@
                                         </div>
                                     </td>
                                 </tr>
-
-                                <tr>
-
-                                <div class="col-md-12">
-                                    <td>
-                                        <label for="selectUsuario" class="form-label">Tipo de Usuario</label>
-                                    </td>
-                                    <td>
-                                        <select name="selectUsuario" id="selectUsuario" class="form-select" required>
-                                            <option selected disabled value="">Seleccione un tipo de usuario</option>
-                                            <option value="Produccion">Usuario de Producción</option>
-                                            <option value="Almacen">Usuario de Almacén</option>
-                                            <option value="Administrador">Administrador</option>
-                                        </select>
-                                    </td>
-                                </div>
-
-                                </tr>
-
+                                <br>
                                 <tr>
                                     <td>
-                                        <div class="col">
-                                            <button class="btn btn-success col-sm-12  botonEnviar" type="submit" id="btnBorrar" onclick="borrarRegistroUsuarios();">Borrar</button>
+                                        <div class="col-md-6">
+                                            <label for="selectUsuario" class="form-label">Tipo de Usuario</label>
+                                            <select name="selectUsuario" id="selectUsuario" class="form-select">
+                                                <option selected disabled value="">Seleccione tipo...</option>
+                                                <option value="Produccion">Usuario de Producción</option>
+                                                <option value="Almacen">Usuario de Almacén</option>
+                                                <option value="Administrador">Administrador</option>
+                                            </select>
                                         </div>
-                                    </td> 
-
-                                    <td>
-                                        <div class="col">
-                                            <button class="btn btn-success col-sm-12 botonEnviar" type="submit" id="btnResumen" >Guardar</button>
-                                        </div> 
                                     </td>
+                                   
                                 </tr>
                             </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                            <br>
+                            <div class="col-md-6">
+                                <button class="btn btn-success col-sm-12 botonEnviar" type="submit" id="btnResumen" >Guardar</button>
+                            </div>
+                        </form>
                     </div>
 
-                    </form>
+
+                    <!-- fin de Formulario  -->
+
+
                 </div>
-
-
-                <!-- fin de Formulario  -->
-
-
             </div>
-        </div>
-    </main>
-</body>
+        </main>
+    </body>
 </html>
 
 

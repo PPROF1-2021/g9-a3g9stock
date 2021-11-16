@@ -1,4 +1,5 @@
 
+
 <a href="url"><img src="https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/assets/logo.png" align="left" height="300"></a>
 
 
@@ -19,9 +20,15 @@ y el stock de producción, cargar, modificar y consultar información de los pro
 y elaboración de listado de pedidos. 
 El usuario administrador podrá agregar usuarios nuevos en el sistema, modificar los permisos de los creados y de los existentes.
 
-<br><br>
+<br>
+<br>
+
+<a href="url"><img src="https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/Documentaci%C3%B3n/Untitled-2.gif"  height="550"></a>
 
 
+<br>
+<br>
+<br>
 
 ### Aula 3 -  Grupo 9
 

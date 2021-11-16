@@ -28,7 +28,7 @@ El usuario administrador podrá agregar usuarios nuevos en el sistema, modificar
 
 ## Ejecutando las pruebas ⚙️
 
-<a href="url"><img src="https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/Documentaci%C3%B3n/Untitled-2.gif"></a>
+<a href="url"><img src="https://github.com/PPROF1-2021/g9-a3g9stock/blob/main/Documentaci%C3%B3n/Untitled-1.gif"></a>
 
 
 <br>

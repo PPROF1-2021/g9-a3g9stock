@@ -68,6 +68,7 @@ El usuario administrador podrá agregar usuarios nuevos en el sistema, modificar
 * ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3)
 * ![Javascript](https://img.shields.io/badge/-JavaScript-EDD222?style=flat&logo=javascript&logoColor=white)
 * ![Java](https://img.shields.io/badge/-Java-6EBF20?style=flat&logo=java&logoColor=white)
+* ![PHP](https://img.shields.io/badge/-Php-181717?style=flat&logo=php&logoColor=white) 
 * ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=flat&logo=bootstrap&logoColor=white)
 * ![Xampp](http://img.shields.io/badge/-Xampp-FF9A00?style=flat&logo=xampp&logoColor=white)
 * ![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white)

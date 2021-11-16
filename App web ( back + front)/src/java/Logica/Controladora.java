@@ -11,25 +11,33 @@ import java.util.logging.Logger;
 public class Controladora {
 
     ControladoraPersistencia controlPersis = new ControladoraPersistencia();
-
+    
      //recibe los parametros del servlet, los procesa y lo pasa a la persistencia para guardarlos
     public void crearUsuario(String inputNombre, String inputApellido, String inputEmail, String inputPassword, String inputTelefono, String inputDireccion, String inputFNacim, String selectProvincia, String selectUsuario) {
         Usuario usuario = new Usuario();
         Date fechaN;
-        
+        Encoder encriptador = new Encoder();
+        TipoDeUsuario tipoUsuario = new TipoDeUsuario();
 
         //convierto la fecha de string a date
         fechaN = parseFecha(inputFNacim);
         
-        //falta encriptar la contraseña
+        tipoUsuario = controlPersis.buscarUnTipoDeUsuario(selectUsuario);
+        
         
         //asigno los valores al usuario para pasarlos a la persistencia
         usuario.setNombre(inputNombre);
         usuario.setApellido(inputApellido);
         usuario.setEmail(inputEmail);
         usuario.setFechaNacimiento(fechaN);
+        usuario.setContrasenia(encriptador.encriptar(inputPassword)); //asigno la clave encriptada
+        usuario.setTelefono(inputTelefono);
+        usuario.setDireccion(inputDireccion);
+        usuario.setFechaNacimiento(fechaN);
+        usuario.setProvincia(selectProvincia);
+        usuario.setTipoUsuario(tipoUsuario);
         
-    
+        controlPersis.guardarUsuario(usuario);
     }
     
     

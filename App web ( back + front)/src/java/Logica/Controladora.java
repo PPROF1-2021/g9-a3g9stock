@@ -1,18 +1,68 @@
-
 package Logica;
 
 import Persistencia.ControladoraPersistencia;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Controladora {
-    
+
     ControladoraPersistencia controlPersis = new ControladoraPersistencia();
+
+     //recibe los parametros del servlet, los procesa y lo pasa a la persistencia para guardarlos
+    public void crearUsuario(String inputNombre, String inputApellido, String inputEmail, String inputPassword, String inputTelefono, String inputDireccion, String inputFNacim, String selectProvincia, String selectUsuario) {
+        Usuario usuario = new Usuario();
     
-        //metodo para el logueo del usuario, verifica si existe en la base de datos
+        //falta encriptar la contraseña y convertir la fecha de string a date
+        
+        //asigno los valores al usuario para pasarlos a la persistencia
+        usuario.setNombre(inputNombre);
+        usuario.setApellido(inputApellido);
+        usuario.setEmail(inputEmail);
+        
+    
+    }
+    
+    
+    //método para convertir el string en formato fecha para poder pasarlo a la controladora de persistencia
+    public Date parseFecha(String fechaAParsear) {
+        Date fechaParse = new Date();
+
+        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            fechaParse = formato.parse(fechaAParsear);
+        } catch (ParseException ex) {
+            Logger.getLogger(Controladora.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        formato.format(fechaParse);
+        return fechaParse;
+    }
+
+    //permite darle el formato a la fecha
+    public String formatearFecha(Date fecha) {
+        String fechaFormateada;
+
+        //le doy el formato a la fecha para poder devolverla y mostrarla
+        SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+        fechaFormateada = formato.format(fecha);
+
+        return fechaFormateada;
+
+    }
+    
+    
+    
+    
+    
+    
+    //metodo para el logueo del usuario, verifica si existe en la base de datos
     //si no hay ningun usuario, crea el usuario admin, clave admin
     public boolean verificarUsuario(String usuario, String contrasenia) {
         List<Usuario> listaUsuarios;
-        
+
         listaUsuarios = controlPersis.recuperarUsuarios();
 
         if (listaUsuarios.isEmpty()) {
@@ -29,9 +79,8 @@ public class Controladora {
         }
         return false;
     }
-    
-    
-     //para agregar el usuario admin cuando se carga por primera vez
+
+   //para agregar el usuario admin cuando se carga por primera vez
     public void agregarAdmin() {
         Usuario empleado = new Usuario();
         Usuario usuario = new Usuario();
@@ -40,7 +89,6 @@ public class Controladora {
         usuario.setEmail("admin@admin");
         usuario.setContrasenia("admin");
 
-        
         cargo = buscarUnCargo("Administrador");
 
         empleado.setNombre("admin");
@@ -51,13 +99,11 @@ public class Controladora {
 
         controlPersis.agregarAdmin(usuario);
     }
-    
-     public TipoDeUsuario buscarUnCargo(String nombreCargo) {
+
+    public TipoDeUsuario buscarUnCargo(String nombreCargo) {
         TipoDeUsuario cargo;
         cargo = controlPersis.buscarUnCargo(nombreCargo);
         return cargo;
     }
+   
 }
-
-
-

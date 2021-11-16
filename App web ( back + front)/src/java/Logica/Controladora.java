@@ -76,7 +76,7 @@ public class Controladora {
     //si no hay ningun usuario, crea el usuario admin, clave admin
     public boolean verificarUsuario(String usuario, String contrasenia) {
         List<Usuario> listaUsuarios;
-
+        Encoder encriptador = new Encoder();
         listaUsuarios = controlPersis.recuperarUsuarios();
 
         if (listaUsuarios.isEmpty()) {
@@ -85,7 +85,7 @@ public class Controladora {
         } else { //si la lista está vacía agrego el usuario admin / clave admin
 
             for (Usuario usu : listaUsuarios) {
-                if (usu.getEmail().equals(usuario) && usu.getContrasenia().equals(contrasenia)) {
+                if (usu.getEmail().equals(usuario) && usu.getContrasenia().equals(encriptador.encriptar(contrasenia))) {
                     return true;
                 }
 

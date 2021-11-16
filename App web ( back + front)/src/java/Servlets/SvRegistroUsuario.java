@@ -45,7 +45,7 @@ public class SvRegistroUsuario extends HttpServlet {
         String selectUsuario = request.getParameter("selectUsuario");
         
 
-        //traigo la sesion y asigno  los atributos para abrir en cualquier JSP
+        //traigo la sesion y asigno  los atributos para tomarlos desde otros jsp
         request.getSession().setAttribute("inputNombre", inputNombre);
         request.getSession().setAttribute("inputApellido", inputApellido);
         request.getSession().setAttribute("inputEmail", inputEmail);

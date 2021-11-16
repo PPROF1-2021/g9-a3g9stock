@@ -99,7 +99,6 @@ function validarAltaStockMP() {
   }
 }
 
-/********** funciones pasadas al archivo funcionesGrupo99.js **********
 function borrarRegistroUsuarios() {
   document.getElementById('inputNombre').value = '';
   document.getElementById('inputApellido').value = '';
@@ -171,4 +170,3 @@ function validarRegUsuario() {
     return false;
   }
 }
-*/

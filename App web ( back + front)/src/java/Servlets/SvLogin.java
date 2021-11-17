@@ -54,16 +54,18 @@ public class SvLogin extends HttpServlet {
             usu = control.buscarUnUsuario(usuario);
             nombreUsu = usu.getNombre() + " " + usu.getApellido();
             
-            //seteo la sesion en true para que se pueda
+            //seteo la sesion en true para que se muestre el contenido de la pagina y paso los valores a la sesion
             HttpSession misesion = request.getSession(true);
             misesion.setAttribute("usuario", usuario);
             misesion.setAttribute("contrasenia", contrasenia);
             misesion.setAttribute("nombreUsu", nombreUsu);
             
+            //redirecciono al index
             response.sendRedirect("index.jsp");
         }
         else{
             
+            //si entra aca quiere decir que no esta logueado, redirecciono al login
             response.sendRedirect("login.jsp");
         }
     }

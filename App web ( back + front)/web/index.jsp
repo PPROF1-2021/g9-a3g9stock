@@ -45,7 +45,7 @@
                 response.sendRedirect("login.jsp");
             } else {
                 String nombre = (String) misesion.getAttribute("nombreUsu");
-                System.out.println("llega al jsp con" + nombre);
+                
 
         %>
         <!-- Menú -->

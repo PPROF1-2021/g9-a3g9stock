@@ -3,6 +3,8 @@ package Persistencia;
 import Logica.TipoDeUsuario;
 import Logica.Usuario;
 import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 public class ControladoraPersistencia {
 
@@ -91,4 +93,8 @@ public class ControladoraPersistencia {
         UsuarioJpaController usuarioControl = new UsuarioJpaController();
         usuarioControl.create(usuario);
     }
+
 }
+
+
+

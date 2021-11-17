@@ -1,9 +1,3 @@
-<%-- 
-    Document   : errLogin
-    Created on : 17 nov. 2021, 09:56:33
-    Author     : Caro
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -47,8 +41,6 @@
                                 </div>
                         </div>
                          </div>
-                        
-                       
                     </form>
                 </div>
             </div>

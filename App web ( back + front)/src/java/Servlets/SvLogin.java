@@ -60,6 +60,7 @@ public class SvLogin extends HttpServlet {
             misesion.setAttribute("contrasenia", contrasenia);
             misesion.setAttribute("nombreUsu", nombreUsu);
             
+            
             //redirecciono al index
             response.sendRedirect("index.jsp");
         }

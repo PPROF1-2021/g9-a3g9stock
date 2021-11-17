@@ -40,10 +40,13 @@
         <%
             HttpSession misesion = request.getSession();
             String usuario = (String) misesion.getAttribute("usuario");
+            
 
             if (usuario == null) {
                 response.sendRedirect("login.jsp");
             } else {
+            String nombre = (String) misesion.getAttribute("nombreUsu");
+            System.out.println("llega al jsp con" + nombre);
 
         %>
         <!-- Menú -->
@@ -262,7 +265,7 @@
                                     data-bs-toggle="dropdown"
                                     aria-expanded="false"
                                     >
-                                    <i class="fas fa-user me-2"></i>Ana Perez
+                                    <i class="fas fa-user me-2"></i><%= nombre%>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item disabled" href="#">Perfil</a></li>
@@ -276,7 +279,7 @@
                     </div>
                 </nav>
 
-                <!-- /#cierre menú -->
+                <!-- /cierre menú -->
 
                 <!-- Contenido de la página -->
                 <!-- Begin Page Content -->

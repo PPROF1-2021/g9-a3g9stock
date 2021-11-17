@@ -94,6 +94,30 @@ public class Controladora {
         return false;
     }
 
+    //permite buscar un usuario determinado
+    public Usuario buscarUnUsuario(String email){
+        Usuario usuario = new Usuario();
+         List<Usuario> listaUsuarios;
+        
+        listaUsuarios = controlPersis.recuperarUsuarios();
+
+        if (listaUsuarios.isEmpty()) {
+            agregarAdmin();
+
+        } else { //si la lista está vacía agrego el usuario admin / clave admin
+
+            for (Usuario usu : listaUsuarios) {
+                if (usu.getEmail().equals(email)) { //verifico que coincida el mail y retorno el usuario correspondiente
+                    usuario = usu;
+                    return usuario;
+                }
+
+            }
+        }
+    
+        return usuario;
+    }
+    
    //para agregar el usuario admin cuando se carga por primera vez
     public void agregarAdmin() {
         Usuario empleado = new Usuario();

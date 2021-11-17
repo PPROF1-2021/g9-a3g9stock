@@ -28,7 +28,6 @@ public class ControladoraPersistencia {
         TipoDeUsuario cargo = new TipoDeUsuario();
 
         listaCargos = recuperarCargos();
-        System.out.println("llega hasta buscar un cargo");
         if (!listaCargos.isEmpty()) {
             for (TipoDeUsuario c : listaCargos) {
                 if (c.getTipoUsuario().equals(nombreCargo)) {

@@ -59,15 +59,12 @@ public class SvRegistroUsuario extends HttpServlet {
         
         Controladora control = new Controladora();
         Usuario usuario;
-        //validar mail: hacer if, si el mail no esta en la bbdd se guarda, si no 
-        //redireccionar al registro, cargar los datos ingresados en el form automaticamente
-        //y mostrar aviso de que el email ya esta registrado, que en caso de no recordar la clave
-        //contacte al administrador
+       
         
         usuario = control.buscarUnUsuario(inputEmail);
         System.out.println("usuario " + usuario.getEmail());
-        //si el mail esta guardado en la bbdd redirecciono al form de registro para informar que 
-        //el usuario ya esta registrado
+        //si el mail esta guardado en la bbdd redirecciono al form de error de 
+        //registro para informar que el usuario ya esta registrado
         if(usuario.getEmail()!=null){
             System.out.println("entra al if " + usuario.getEmail());    
             response.sendRedirect("errorRegistroUsuario.jsp");

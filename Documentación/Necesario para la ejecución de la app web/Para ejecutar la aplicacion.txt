@@ -5,11 +5,11 @@ jdbc:mysql://localhost:3306/bfss?serverTimeZone=UTC
 
 Para poder ejecutar la aplicación web:
 *crear desde phpmyadmin una base de datos vacía (sin tablas) con el nombre bfss. 
-*Crear un usuario con los datos de conexion especificados al comienzo del archivo. 
+*Crear un usuario con los datos especificados más arriba. 
 *Establecer la conexion desde el ide con la base de datos utilizando mysql-conector-java-8.0.11 (en netbeans, en la pestaña services>databases> click derecho>new connection)
 
 
 Librerias utilizadas:
 EclipseLink (JPA 2.1)
-javax.persistence 2.2.1 
+javax.persistence 2.2.1
 mysql-conector-java-8.0.11

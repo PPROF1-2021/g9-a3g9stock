@@ -44,11 +44,11 @@ function validarComent() {
 
     //verifico que el telefono sea numerico primero y que contenga diez digitos en el else if
     if (isNaN(telef)) {
-        alert('El campo télefono debe contener un número de contacto válido');
+        alert('El campo telefono debe contener un numero de contacto valido');
         return false;
     } else if (telef.length > 10 || telef.length < 10) {
         alert(
-                'El número debe contener 10 dígitos (código de área sin cero y número sin quince'
+                'El numero debe contener 10 digitos (codigo de area sin cero y numero sin quince'
                 );
         return false;
     }
@@ -59,7 +59,7 @@ function validarComent() {
                     email
                     )
             ) {
-        alert('Debes ingresar un email válido.');
+        alert('Debes ingresar un email valido.');
         return false;
     }
 }

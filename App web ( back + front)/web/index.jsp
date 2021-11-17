@@ -40,13 +40,12 @@
         <%
             HttpSession misesion = request.getSession();
             String usuario = (String) misesion.getAttribute("usuario");
-            
 
             if (usuario == null) {
                 response.sendRedirect("login.jsp");
             } else {
-            String nombre = (String) misesion.getAttribute("nombreUsu");
-            System.out.println("llega al jsp con" + nombre);
+                String nombre = (String) misesion.getAttribute("nombreUsu");
+                System.out.println("llega al jsp con" + nombre);
 
         %>
         <!-- Menú -->
@@ -272,7 +271,11 @@
                                     <li>
                                         <a class="dropdown-item disabled" href="#">Configuración</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="login.html">Salir</a></li>
+                                    <li>
+                                        <form action="SvCerrarSesion" method="GET">
+                                            <a href="SvCerrarSesion" class="dropdown-item" href="login.jsp">Salir</a>
+                                        </form>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

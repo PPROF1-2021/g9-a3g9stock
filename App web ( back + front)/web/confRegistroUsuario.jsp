@@ -86,13 +86,13 @@
                                             <br>
                                             <br>
                                             <p>En unos segundos será redireccionado a la pagina de logueo</p>
-                                            <p>Presione <a href="index.jsp">aquí</a> si no desea esperar</p>
+                                            <p>Presione <a href="login.jsp">aquí</a> si no desea esperar</p>
 
                                             <script>
                                                 // script que redirecciona a la pagina de login
                                                 var tiempo = 5000; //5 segundos de espera
                                                 setTimeout(function () {
-                                                    window.location = 'index.jsp';
+                                                    window.location = 'login.jsp';
                                                 }, tiempo);
                                             </script>
 

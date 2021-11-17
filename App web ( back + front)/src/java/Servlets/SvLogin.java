@@ -66,7 +66,9 @@ public class SvLogin extends HttpServlet {
         else{
             
             //si entra aca quiere decir que no esta logueado, redirecciono al login
-            response.sendRedirect("login.jsp");
+            HttpSession misesion = request.getSession(false);
+            misesion.setAttribute("usuario", usuario);
+            response.sendRedirect("errLogin.jsp");
         }
     }
 

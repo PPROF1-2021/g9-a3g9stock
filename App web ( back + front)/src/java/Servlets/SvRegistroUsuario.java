@@ -17,7 +17,7 @@ public class SvRegistroUsuario extends HttpServlet {
    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        
        
     }
 
@@ -62,16 +62,13 @@ public class SvRegistroUsuario extends HttpServlet {
        
         
         usuario = control.buscarUnUsuario(inputEmail);
-        System.out.println("usuario " + usuario.getEmail());
         //si el mail esta guardado en la bbdd redirecciono al form de error de 
         //registro para informar que el usuario ya esta registrado
         if(usuario.getEmail()!=null){
-            System.out.println("entra al if " + usuario.getEmail());    
             response.sendRedirect("errorRegistroUsuario.jsp");
         }
         else{//el mail no se encuentra registrado, pasa por el else
         //paso los datos a la lógica
-            System.out.println("entra a guardar");
         control.crearUsuario(inputNombre, inputApellido, inputEmail, inputPassword, inputTelefono, inputDireccion, inputFNacim, selectProvincia, selectUsuario);
         
         

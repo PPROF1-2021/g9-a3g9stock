@@ -41,7 +41,7 @@ public class SvLogin extends HttpServlet {
         String contrasenia = request.getParameter("password");
         
         Controladora control = new Controladora();
-        Usuario usu = new Usuario();
+        Usuario usu;
         
         boolean autorizado = control.verificarUsuario(usuario, contrasenia);
         
@@ -70,11 +70,7 @@ public class SvLogin extends HttpServlet {
         }
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
+    
     @Override
     public String getServletInfo() {
         return "Short description";

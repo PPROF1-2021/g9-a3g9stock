@@ -6,9 +6,9 @@
 # Beer Friends Stock System
 ## Aplicación web para Control de Stock de Cervecerías Artesanales
 
-   [![Ver Online Badge](https://img.shields.io/badge/-Ver%20en%20Hosting%20con%20soporte%20para%20PHP-green?style=flatsquare&link=https://friendsdelcms.000webhostapp.com/)](https://friendsdelcms.000webhostapp.com/)
+   [![Ver Online Badge](https://img.shields.io/badge/-Ver%20Front%20en%20Hosting%20con%20soporte%20para%20PHP-green?style=flatsquare&link=https://friendsdelcms.000webhostapp.com/)](https://friendsdelcms.000webhostapp.com/)
  
- [![Ver Online Badge](https://img.shields.io/badge/-Ver%20sitio%20en%20GitHub%20Pages-orange?style=flatsquare&link=https://pprof1-2021.github.io/g9-a3g9stock/index.html)](https://pprof1-2021.github.io/g9-a3g9stock/index.html) 
+ [![Ver Online Badge](https://img.shields.io/badge/-Ver%20Front%20en%20GitHub%20Pages-orange?style=flatsquare&link=https://pprof1-2021.github.io/g9-a3g9stock/index.html)](https://pprof1-2021.github.io/g9-a3g9stock/index.html) 
  
  [![Ver Online Badge](https://img.shields.io/badge/-Ver%20Wiki-yellow?style=flatsquare&link=https://pprof1-2021.github.io/g9-a3g9stock/index.html)](https://github.com/PPROF1-2021/g9-a3g9stock/wiki) 
  <br>
